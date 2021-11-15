@@ -1,5 +1,8 @@
-$black: #000;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
-body{
-    background-color: $black;
-}
+
+@import '_variables.scss';
+@import '_settings.scss';
+@import '_mixins.scss';
+@import '_navbar.scss';
+@import '_sidebar.scss';
