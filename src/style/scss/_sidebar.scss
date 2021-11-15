@@ -1,0 +1,18 @@
+.sidebar{
+    position: relative;
+    top: 50px;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    height: 100vh;
+    background-color: #fff;
+    transition: all .3s ease-in-out;
+
+    ul{
+        padding: 20px 0 0 20px;
+    }
+}
+
+.sidebar.toggle{
+    transform: translate(-100%);
+}
