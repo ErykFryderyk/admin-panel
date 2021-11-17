@@ -7,7 +7,7 @@
   padding: 0; }
 
 body {
-  color: white;
+  color: black;
   background-color: #000;
   font-family: 'Poppins', sans-serif; }
 
@@ -17,7 +17,14 @@ html {
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   line-height: normal;
-  color: #fff; }
+  color: black; }
+
+a {
+  text-decoration: none;
+  color: white; }
+
+li {
+  list-style-type: none; }
 
 .container {
   width: 100%;
@@ -49,7 +56,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0; }
 
 body {
-  color: white;
+  color: black;
   background-color: #000;
   font-family: 'Poppins', sans-serif; }
 
@@ -59,7 +66,14 @@ html {
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   line-height: normal;
-  color: #fff; }
+  color: black; }
+
+a {
+  text-decoration: none;
+  color: white; }
+
+li {
+  list-style-type: none; }
 
 .container {
   width: 100%;
@@ -87,25 +101,28 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   width: 100%;
   height: 50px;
-  padding: 0 15px 0 15px;
+  padding: 0 15px;
   display: grid;
-  grid-template-columns: 50px 1fr 1fr;
+  grid-template-columns: .5fr 1fr .5fr;
   background-color: #b8b8b8; }
   @media only screen and (min-width: 576px) {
     .navbar {
-      grid-template-columns: 200px 1fr 1fr; } }
+      grid-template-columns: 200px 1fr 100px;
+      padding: 0px 30px; } }
   .navbar__brand {
     display: flex;
     height: 50px;
     align-items: center; }
     .navbar__brand i {
-      font-size: 30px; }
+      font-size: 30px;
+      color: white; }
     .navbar__brand label {
+      color: white;
       font-size: 20px;
       margin-left: 10px;
       transform: translate(-100%);
       opacity: 0;
-      transition: all .3s; }
+      transition: all .3s .3s; }
       @media only screen and (min-width: 576px) {
         .navbar__brand label {
           display: block;
@@ -116,12 +133,18 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     height: 50px; }
     .navbar__menu .hamburger {
-      font-size: 30px; }
+      font-size: 30px;
+      cursor: pointer;
+      background-color: transparent;
+      border: none; }
+      .navbar__menu .hamburger i {
+        color: white; }
     .navbar__menu .search {
       margin-left: 20px;
       display: flex;
       position: relative; }
       .navbar__menu .search i {
+        color: white;
         position: absolute;
         top: 5px;
         left: 8px; }
@@ -143,16 +166,95 @@ h1, h2, h3, h4, h5, h6 {
   .navbar__settings {
     display: flex;
     align-items: center;
-    justify-content: end; }
-    .navbar__settings .profile {
-      width: 40px;
-      height: 40px; }
-      .navbar__settings .profile img {
+    justify-content: space-between; }
+    .navbar__settings .notification {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .navbar__settings .notification__wrapper {
+        position: relative;
+        width: 30px; }
+      .navbar__settings .notification__btn {
         width: 100%;
-        border-radius: 50%; }
+        height: 30px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        position: relative; }
+        .navbar__settings .notification__btn i {
+          color: #fff;
+          font-size: 25px; }
+        .navbar__settings .notification__btn::before {
+          content: '3';
+          color: #e4e4e4;
+          font-size: 10px;
+          position: absolute;
+          left: 16px;
+          top: -3px;
+          width: 12px;
+          height: 12px;
+          background-color: #000000b3;
+          border-radius: 10px; }
+      .navbar__settings .notification__dropdown {
+        top: 50px;
+        left: -180px;
+        border-radius: 5px;
+        position: absolute;
+        background-color: #fff;
+        min-width: 250px;
+        height: auto; }
+        .navbar__settings .notification__dropdown .dropdown {
+          padding-top: 10px; }
+          .navbar__settings .notification__dropdown .dropdown__title {
+            color: black;
+            font-size: 16px;
+            letter-spacing: 1px;
+            font-weight: 300;
+            padding: 0px 10px;
+            margin-bottom: 10px; }
+          .navbar__settings .notification__dropdown .dropdown__items {
+            width: 100%;
+            padding: 10px 15px;
+            cursor: pointer;
+            transition: background .2s ease-in-out; }
+            .navbar__settings .notification__dropdown .dropdown__items:hover {
+              background: #e2e2e2b9; }
+            .navbar__settings .notification__dropdown .dropdown__items:last-child {
+              border-radius: 0px 0px 5px 5px; }
+            .navbar__settings .notification__dropdown .dropdown__items a {
+              display: flex;
+              width: 100%;
+              height: 100%;
+              color: black; }
+            .navbar__settings .notification__dropdown .dropdown__items i {
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              color: #fff;
+              text-align: center;
+              line-height: 40px;
+              font-size: 23px;
+              background-color: #46cf46; }
+            .navbar__settings .notification__dropdown .dropdown__items .item-box {
+              margin-left: 10px; }
+              .navbar__settings .notification__dropdown .dropdown__items .item-box h6 {
+                font-size: 16px;
+                font-weight: 300;
+                color: black; }
+              .navbar__settings .notification__dropdown .dropdown__items .item-box p {
+                font-size: 14px;
+                font-weight: 300;
+                color: #7c7c7c; }
+    .navbar__settings .profile {
+      width: 35px;
+      height: 35px;
+      transform: translateY(-3px); }
+      .navbar__settings .profile img {
+        border-radius: 50%;
+        width: 100%; }
 
 .sidebar {
-  position: relative;
+  position: fixed;
   top: 50px;
   left: 0;
   bottom: 0;
@@ -162,6 +264,8 @@ h1, h2, h3, h4, h5, h6 {
   transition: all .3s ease-in-out; }
   .sidebar ul {
     padding: 20px 0 0 20px; }
+    .sidebar ul li a {
+      color: black; }
 
 .sidebar.toggle {
   transform: translate(-100%); }
