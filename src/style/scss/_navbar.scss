@@ -4,15 +4,16 @@
     position: fixed;
     width: 100%;
     height: 50px;
-    padding: 0 15px 0 15px;
+    padding: 0 15px;
     display: grid;
-    grid-template-columns: 50px 1fr 1fr;
+    grid-template-columns: .5fr 1fr .5fr;
     background-color: $color-1;
 
-
     @include bp(phone){
-        grid-template-columns: 200px 1fr 1fr;
+        grid-template-columns: 200px 1fr 100px;
+        padding: 0px 30px;
     }   
+
     &__brand{
         display: flex;
         height: 50px;
@@ -20,15 +21,17 @@
 
         i {
             font-size:  30px;
+            color: white;
         }
 
         label{
             // display: none;
+            color: white;
             font-size: 20px;
             margin-left: 10px;
             transform: translate(-100%);
             opacity: 0;
-            transition: all .3s;
+            transition: all .3s .3s;
 
             @include bp(phone) {
                 display: block;
@@ -45,6 +48,13 @@
 
         .hamburger{
             font-size: 30px;
+            cursor: pointer;
+            background-color: transparent;
+            border:none;
+
+            i{
+                color: white;
+            }
         }
         .search{
             margin-left: 20px;
@@ -52,6 +62,7 @@
             position: relative;
 
             i{
+                color: white;
                 position: absolute;
                 top: 5px;
                 left: 8px;
@@ -84,15 +95,119 @@
     &__settings{
         display: flex;
         align-items: center;
-        justify-content: end;
+        justify-content: space-between;
 
-        .profile{
-            width: 40px;
-            height: 40px;
+        .notification{
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-            img{
+            &__wrapper{
+                position: relative;
+                width: 30px;
+            }
+            &__btn{
                 width: 100%;
+                height: 30px;
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+                position: relative;
+                
+                i{
+                    color: #fff;
+                    font-size: 25px;
+                }
+
+                &::before{
+                    content: '3';
+                    color: #e4e4e4;
+                    font-size: 10px;
+                    position: absolute;
+                    left: 16px;
+                    top: -3px;
+                    width: 12px;
+                    height: 12px;
+                    background-color: #000000b3;
+                    border-radius: 10px;
+                }
+            }
+            &__dropdown{
+                top: 50px;
+                left: -180px;
+                border-radius: 5px;
+                position: absolute;
+                background-color: #fff;
+                min-width: 250px;
+                height: auto;
+                // display: none;
+
+                .dropdown{
+                    padding-top: 10px;
+                    
+                    &__title{
+                        color: black;
+                        font-size: 16px;
+                        letter-spacing: 1px;
+                        font-weight: 300;
+                        padding: 0px 10px;
+                        margin-bottom: 10px;
+                    }
+                    &__items{
+                        width: 100%;
+                        padding: 10px 15px;
+                        cursor: pointer;
+                        transition: background .2s ease-in-out;
+
+                        &:hover {
+                            background: #e2e2e2b9;
+                        }
+
+                        &:last-child{
+                            border-radius: 0px 0px 5px 5px;
+                        }
+                        a{
+                            display: flex;
+                            width: 100%;
+                            height: 100%;
+                            color: black;
+                        }
+                        i{
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 50%;
+                            color:#fff;
+                            text-align: center;
+                            line-height: 40px;
+                            font-size: 23px;
+                            background-color: #46cf46;
+                        }
+                        .item-box{
+                            margin-left: 10px;
+                            h6{
+                                font-size: 16px;
+                                font-weight: 300;
+                                color: black;
+                            }
+                            p{
+                                font-size: 14px;
+                                font-weight: 300;
+                                color: #7c7c7c;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        .profile{
+            width: 35px;
+            height: 35px;
+            transform: translateY(-3px);
+            
+            img{
                 border-radius: 50%;
+                width: 100%;
             }
         }
     }

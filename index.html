@@ -16,8 +16,10 @@
             <label>Admin Panel</label>
         </div>
         <div class="navbar__menu">
-            <div class="hamburger">
-                <i class="fa fa-bars" aria-hidden="true"></i>
+            <div class="navbar__hamburger">
+                <button class="hamburger">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </button>
             </div>
             <div class="search">
                 <i class="fa fa-search" aria-hidden="true"></i>
@@ -25,11 +27,54 @@
             </div>
         </div>
         <div class="navbar__settings">
-            <div class="notification">
-                <i class="fa fa-bell" aria-hidden="true"></i>
+            <div class="notification__wrapper">
+                <button class="notification__btn">
+                    <i class="fa fa-bell" aria-hidden="true">
+                        <span class="count"></span>
+                    </i>
+                </button>
+                <div class="notification__dropdown">
+                    <ul class="dropdown">
+                        <h3 class="dropdown__title">Notifications</h3>
+                        <li class="dropdown__items">
+                            <a href="#">
+                                <i class="fa fa-info" aria-hidden="true"></i>
+                                <div class="item-box">
+                                    <h6>Aplication Error</h6>
+                                    <p>Just now</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="dropdown__items">
+                            <a href="#">
+                                <i class="fa fa-info" aria-hidden="true"></i>
+                                <div class="item-box">
+                                    <h6>New user registration</h6>
+                                    <p>Just now</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="dropdown__items">
+                            <a href="#">
+                                <i class="fa fa-info" aria-hidden="true"></i>
+                                <div class="item-box">
+                                    <h6>Aplication Error</h6>
+                                    <p>Just now</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <div class="profile">
                 <img src="./src/img/received_909123655824827.jpeg" alt="">
+                <div class="dropdown-avatar">
+                    <ul>
+                        <li>
+                            
+                        </li>
+                    </ul>
+                </div>
             </div>
             <div class="settings">
                 <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
