@@ -306,6 +306,81 @@ li {
     padding: 20px 0 0 20px; }
     .sidebar ul li a {
       color: black; }
+  .sidebar .change-mode-wrapper {
+    margin-top: 20px;
+    padding: 0 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+    .sidebar .change-mode-wrapper .mode-btn {
+      width: 100px;
+      height: 40px;
+      background-color: transparent;
+      border: 1px solid black;
+      border-radius: 5px;
+      cursor: pointer;
+      outline: none;
+      transition: transform .2s ease-in-out; }
+      .sidebar .change-mode-wrapper .mode-btn i {
+        font-size: 20px; }
+      .sidebar .change-mode-wrapper .mode-btn--dark-mode {
+        background-color: #292929;
+        color: white; }
+      .sidebar .change-mode-wrapper .mode-btn:hover {
+        transform: scale(0.97); }
+      .sidebar .change-mode-wrapper .mode-btn:active {
+        transform: scale(1.02); }
+  .sidebar .nav {
+    margin-top: 20px; }
+    .sidebar .nav__item {
+      margin-bottom: 5px; }
+    .sidebar .nav__link {
+      position: relative;
+      border-radius: 5px 0 0 5px;
+      padding: 10px 10px;
+      display: block;
+      transition: background-color .2s ease; }
+      .sidebar .nav__link:hover {
+        background-color: #62c5c0; }
+        .sidebar .nav__link:hover .nav__title {
+          animation: move-right .3s; }
+    .sidebar .nav__icon {
+      width: 25px;
+      font-size: 25px;
+      color: #6e6e6e; }
+      .sidebar .nav__icon.toggle {
+        display: none; }
+    .sidebar .nav__title {
+      margin-left: 10px;
+      position: absolute;
+      font-size: 18px;
+      font-weight: 300; }
+    .sidebar .nav__arrow {
+      line-height: 1.5;
+      position: absolute;
+      right: 25px;
+      font-size: 20px;
+      transition: translate .2s ease-in-out; }
+      .sidebar .nav__arrow.active {
+        transform: rotate(90deg); }
 
 .sidebar.toggle {
-  transform: translate(-100%); }
+  transform: translate(-300px); }
+  @media only screen and (min-width: 576px) {
+    .sidebar.toggle {
+      transform: translate(-250px); }
+      .sidebar.toggle .nav__arrow,
+      .sidebar.toggle .nav__title {
+        display: none; }
+      .sidebar.toggle .nav__icon {
+        margin-left: auto;
+        margin-right: 0; } }
+
+@keyframes move-right {
+  0% {
+    transform: translateX(0); }
+  50% {
+    transform: translate(5px); }
+  100% {
+    transform: translateX(0); } }
