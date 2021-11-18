@@ -1,3 +1,5 @@
+@import '_variables.scss';
+
 .sidebar{
     position: fixed;
     top: 50px;
@@ -16,8 +18,116 @@
             }
         }
     }
+
+    .change-mode-wrapper{
+        margin-top: 20px;
+        padding: 0 20px;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .mode-btn{
+            width: 100px;
+            height: 40px;
+            background-color: transparent;
+            border: 1px solid black;
+            border-radius: 5px;
+            cursor: pointer;
+            outline: none;
+            transition: transform .2s ease-in-out;
+            
+            i{
+                font-size: 20px;
+            }
+            
+            &--dark-mode{
+                background-color: #292929;
+                color: white;
+            }
+
+            &:hover{
+                transform: scale(.97);
+            }
+            &:active{
+                transform: scale(1.02);
+            }
+            
+        }
+    }
+    .nav{
+        margin-top: 20px;
+
+        &__item{
+            margin-bottom: 5px;
+        }
+        &__link{
+            position: relative;
+            border-radius: 5px 0 0 5px;
+            padding: 10px 10px;
+            display: block;
+            transition: background-color .2s ease;
+
+            &:hover{
+                background-color: $color-2;
+                .nav__title{
+                    animation: move-right .3s;
+                }
+            }
+        }
+        &__icon{
+            width: 25px;
+            font-size: 25px;
+            color: $color-3;
+
+            &.toggle{
+                display: none;
+            }
+        }
+        &__title{
+            margin-left: 10px;
+            position: absolute;
+            font-size: 18px;
+            font-weight: 300;
+        }
+        &__arrow{
+            line-height: 1.5;
+            position: absolute;
+            right: 25px;
+            font-size: 20px;
+            transition: translate .2s ease-in-out;
+
+            &.active{
+                transform: rotate(90deg);
+            }
+        }
+    }
 }
 
 .sidebar.toggle{
-    transform: translate(-100%);
+    transform: translate(-300px);
+
+    @include bp(phone){
+        transform: translate(-250px);
+        .nav__arrow,
+        .nav__title{
+            display: none;
+        }
+        .nav__icon{
+            margin-left: auto;
+            margin-right: 0;
+        }
+    }
+}
+
+@keyframes move-right {
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translate(5px);
+    }
+    100%{
+        transform: translateX(0);
+    }
 }
