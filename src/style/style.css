@@ -183,7 +183,7 @@ li {
         position: relative; }
         .navbar__settings .notification__btn i {
           color: #fff;
-          font-size: 25px; }
+          font-size: 20px; }
         .navbar__settings .notification__btn::before {
           content: '3';
           color: #e4e4e4;
@@ -202,7 +202,8 @@ li {
         position: absolute;
         background-color: #fff;
         min-width: 250px;
-        height: auto; }
+        height: auto;
+        display: none; }
         .navbar__settings .notification__dropdown .dropdown {
           padding-top: 10px; }
           .navbar__settings .notification__dropdown .dropdown__title {
@@ -248,10 +249,49 @@ li {
     .navbar__settings .profile {
       width: 35px;
       height: 35px;
-      transform: translateY(-3px); }
+      transform: translateY(-3px);
+      cursor: pointer;
+      position: relative; }
       .navbar__settings .profile img {
         border-radius: 50%;
         width: 100%; }
+      .navbar__settings .profile__dropdown {
+        position: absolute;
+        background-color: #fff;
+        min-width: 150px;
+        top: 55px;
+        left: -130px;
+        border-radius: 5px;
+        z-index: 999;
+        display: none; }
+      .navbar__settings .profile__inner {
+        padding: 10px 0; }
+      .navbar__settings .profile__item {
+        width: 100%;
+        padding: 10px 15px;
+        cursor: pointer;
+        transition: background .2s ease-in-out; }
+        .navbar__settings .profile__item:hover {
+          background: #e2e2e2b9; }
+        .navbar__settings .profile__item i {
+          color: #663f85;
+          font-size: 23px; }
+      .navbar__settings .profile__link {
+        display: flex;
+        align-items: center; }
+        .navbar__settings .profile__link h6 {
+          margin-left: 10px;
+          font-size: 18px;
+          font-weight: 300; }
+    .navbar__settings .todo-btn {
+      width: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer; }
+      .navbar__settings .todo-btn i {
+        color: white;
+        transform: rotate(90deg); }
 
 .sidebar {
   position: fixed;
