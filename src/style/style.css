@@ -197,13 +197,14 @@ li {
           border-radius: 10px; }
       .navbar__settings .notification__dropdown {
         top: 50px;
-        left: -180px;
+        left: -230px;
         border-radius: 5px;
         position: absolute;
         background-color: #fff;
         min-width: 250px;
         height: auto;
-        display: none; }
+        box-shadow: 0px 0px 10px #00000052;
+        opacity: 0; }
         .navbar__settings .notification__dropdown .dropdown {
           padding-top: 10px; }
           .navbar__settings .notification__dropdown .dropdown__title {
@@ -263,7 +264,8 @@ li {
         left: -130px;
         border-radius: 5px;
         z-index: 999;
-        display: none; }
+        box-shadow: 0px 0px 10px #00000052;
+        opacity: 0; }
       .navbar__settings .profile__inner {
         padding: 10px 0; }
       .navbar__settings .profile__item {
@@ -292,6 +294,28 @@ li {
       .navbar__settings .todo-btn i {
         color: white;
         transform: rotate(90deg); }
+
+.show {
+  animation: show-dropdown .3s forwards; }
+
+.hide {
+  animation: hide-dropdown .3s forwards; }
+
+@keyframes show-dropdown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px); }
+  to {
+    opacity: 1;
+    transform: translateY(0); } }
+
+@keyframes hide-dropdown {
+  from {
+    opacity: 1;
+    transform: translateY(0px); }
+  to {
+    opacity: 0;
+    transform: translateY(-20px); } }
 
 .sidebar {
   position: fixed;
