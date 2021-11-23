@@ -11,7 +11,7 @@
 }
 body{
     color: black;
-    background-color: $black;
+    background-color: $bgc;
     font-family: 'Poppins',
     sans-serif;
 }
@@ -59,3 +59,21 @@ li{
     }
 }
 
+.main-panel{
+    display: flex;
+}
+.content-wrapper{
+    // position: relative;
+    padding: 20px;
+    top: 50px;
+    left: 0;
+    bottom: 0;
+    width: calc(100% - 250px);
+    height: calc(100vh - 50px);
+    transition: all .3s ease-in-out;
+}
+
+.sidebar.toggle .content-wrapper{
+    width: 100%;
+    transform: translateX(-250px);
+}
