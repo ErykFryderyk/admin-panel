@@ -1,0 +1,145 @@
+.right-sidebar{
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background-color: $color-0;
+    top: 50px;
+    right: 0;
+    bottom: 0;
+    border-left: 1px solid $color-4;
+    transform: translateX(300px);
+    transition: transform .3s ease-in-out;
+    z-index: 0;
+
+    &--active{
+        transform: translateX(0);
+    }
+
+
+    &__close-btn{
+        position: absolute;
+        right: 10px;
+        top: 6px;
+        background-color: transparent;
+        font-size: 25px;
+        outline: none;
+        padding: 5px;
+        cursor: pointer;
+        border: none;
+        transition: transform .3s ease-in-out;
+
+        &:hover{
+            transform: rotate(90deg);
+        }
+    }
+
+    &__nav{
+        width: 100%;
+        height: 50px;
+        border-bottom: 1px solid $color-1;
+
+        .nav{
+            display: flex;
+            height: 50px;
+            padding-right: 50px;
+            justify-content: space-around;
+            align-items: center;
+            &__item{
+            }
+            &__link{
+                padding: 2px;
+                color: black;
+                text-transform: uppercase;
+
+                &--active{
+                    color: $color-5;
+                }
+            }
+        }
+    }
+
+    &__content{
+        width: 100%;
+        height: auto;
+        padding: 0 10px;
+
+        //TODO-APP element
+        .todo-app{
+
+            &__add-task{
+                padding: 20px 0;
+                display: flex;
+                justify-content: space-around;
+    
+                input{
+                    padding: 10px 10px;
+                    border-radius: 10px;
+                    border: 1px solid $color-3;
+                    background-color: transparent;
+                    outline: none;
+                    font-size: 14px;
+                }
+                button{
+                    border: none;
+                    border-radius: 10px;
+                    background-color: $color-5;
+                    padding: 0 20px;
+                    cursor: pointer;
+                    color: $color-0;
+                    transition: background-color .2s ease-in-out;
+
+                    &:hover{
+                        background-color: $color-6;
+                    }
+                }
+
+                
+            }
+
+            &__list{
+                margin-bottom: 20px;
+                overflow-y: auto;
+                max-height: 300px;
+
+                &::-webkit-scrollbar {
+                    width: 3px;
+                }
+
+                &::-webkit-scrollbar-track {
+                    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    background-color: darkgrey;
+                    outline: 1px solid slategrey;
+                    border-radius: 10px;
+                }
+            }
+
+            &__item{
+                border:1px solid $color-3;
+                border-radius: 10px;
+                padding: 15px 10px;
+                margin-bottom: 7px;
+                position: relative;
+            }
+            &__checkbox{
+                // Custom style
+            }
+            &__remove-item{
+                border: none;
+                outline: none;
+                cursor: pointer;
+                position: absolute;
+                font-size: 20px;
+                top: 15px;
+                right: 20px;
+                transition: color .2s ease-in-out;
+
+                &:hover{
+                    color: $color-7;
+                }
+            }
+        }
+    }
+}
