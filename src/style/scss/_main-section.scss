@@ -1,0 +1,13 @@
+.main-section{
+    position: absolute;
+    width: calc(100% - 50px);
+    top: 50px;
+    left:50px;
+    background-color: $color-7;
+    transition: width .3s ease-in-out, left .3s ease-in-out;
+    padding: 30px;
+}
+.panel-active{
+    width: calc(100% - 300px);
+    left: 300px;
+}
