@@ -90,6 +90,56 @@
             </div>
         </div> 
     </nav>
+    <div class="sidebar toggle">
+        <div class="change-mode-wrapper">
+            <button class="mode-btn light-mode"><i class="fa fa-sun-o" aria-hidden="true"></i></button>
+            <button class="mode-btn mode-btn--dark-mode"><i class="fa fa-moon-o" aria-hidden="true"></i></button>
+        </div>
+        <ul class="nav">
+            <li class="nav__item">
+                <a class="nav__link" href="#">
+                    <i class="nav__icon fa fa-tachometer" aria-hidden="true"></i>
+                    <span class="nav__title">Dashboard</span>
+                    <i class="nav__arrow fa fa-angle-right" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link" href="#">
+                    <i class="nav__icon fa fa-user-o" aria-hidden="true"></i>
+                    <span class="nav__title">Customers</span>
+                    <i class="nav__arrow fa fa-angle-right" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link" href="#">
+                    <i class="nav__icon fa fa-commenting-o" aria-hidden="true"></i>
+                    <span class="nav__title">Message</span>
+                    <i class="nav__arrow fa fa-angle-right" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link" href="#">
+                    <i class="nav__icon fa fa-sliders" aria-hidden="true"></i>
+                    <span class="nav__title">Settings</span>
+                    <i class="nav__arrow fa fa-angle-right" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link" href="#">
+                    <i class="nav__icon fa fa-unlock-alt" aria-hidden="true"></i>
+                    <span class="nav__title">Password</span>
+                    <i class="nav__arrow fa fa-angle-right" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link" href="#">
+                    <i class="nav__icon fa fa-sign-out" aria-hidden="true"></i>
+                    <span class="nav__title">Sign Out</span>
+                    <i class="nav__arrow fa fa-angle-right" aria-hidden="true"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
     <div class="right-sidebar" data-right-sidebar>
         <button class="right-sidebar__close-btn" data-settings-close-btn>
             <i class="fa fa-times" aria-hidden="true"></i>
@@ -135,100 +185,84 @@
                     </ul>
                 </div>
                 <div class="events">
-                    <h4>Events</h4>
-                    <div class="event">
-                        <p>Feb 11 2021</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <h4 class="events__title">Events</h4>
+                    <div class="events__event-item">
+                        <div class="date">
+                            <i class="fa fa-circle-thin" aria-hidden="true"></i>
+                            <p>Feb 11 2021</p>
+                        </div>
+                        <p class="event-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
-                    <div class="event">
-                        <p>Feb 11 2021</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <div class="events__event-item">
+                        <div class="date">
+                            <i class="fa fa-circle-thin" aria-hidden="true"></i>
+                            <p>Feb 11 2021</p>
+                        </div>
+                        <p class="event-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     
-    <main class="main-panel">
-        <div class="sidebar">
-            <div class="change-mode-wrapper">
-                <button class="mode-btn light-mode"><i class="fa fa-sun-o" aria-hidden="true"></i></button>
-                <button class="mode-btn mode-btn--dark-mode"><i class="fa fa-moon-o" aria-hidden="true"></i></button>
-            </div>
-            <ul class="nav">
-                <li class="nav__item">
-                    <a class="nav__link" href="#">
-                        <i class="nav__icon fa fa-tachometer" aria-hidden="true"></i>
-                        <span class="nav__title">Dashboard</span>
-                        <i class="nav__arrow fa fa-angle-right" aria-hidden="true"></i>
-                    </a>
-                </li>
-                <li class="nav__item">
-                    <a class="nav__link" href="#">
-                        <i class="nav__icon fa fa-user-o" aria-hidden="true"></i>
-                        <span class="nav__title">Customers</span>
-                        <i class="nav__arrow fa fa-angle-right" aria-hidden="true"></i>
-                    </a>
-                </li>
-                <li class="nav__item">
-                    <a class="nav__link" href="#">
-                        <i class="nav__icon fa fa-commenting-o" aria-hidden="true"></i>
-                        <span class="nav__title">Message</span>
-                        <i class="nav__arrow fa fa-angle-right" aria-hidden="true"></i>
-                    </a>
-                </li>
-                <li class="nav__item">
-                    <a class="nav__link" href="#">
-                        <i class="nav__icon fa fa-sliders" aria-hidden="true"></i>
-                        <span class="nav__title">Settings</span>
-                        <i class="nav__arrow fa fa-angle-right" aria-hidden="true"></i>
-                    </a>
-                </li>
-                <li class="nav__item">
-                    <a class="nav__link" href="#">
-                        <i class="nav__icon fa fa-unlock-alt" aria-hidden="true"></i>
-                        <span class="nav__title">Password</span>
-                        <i class="nav__arrow fa fa-angle-right" aria-hidden="true"></i>
-                    </a>
-                </li>
-                <li class="nav__item">
-                    <a class="nav__link" href="#">
-                        <i class="nav__icon fa fa-sign-out" aria-hidden="true"></i>
-                        <span class="nav__title">Sign Out</span>
-                        <i class="nav__arrow fa fa-angle-right" aria-hidden="true"></i>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="content-wrapper">
-            <div class="header">
-                <h3>Hello Piter!</h3>
-                <h6 class="">All systems are running smoothly! You have <span class="">3 unread alerts!</span></h6>
-                <button>Today (10 Jan 2021)</button>
-            </div>
-        </div>
-        <div class="weather-info">
-            <img src="images/dashboard/people.svg" alt="people">
-        </div>
-        <div class="card-box">
-            <div class="card-tale">
-                <div class="card-body">
-                    <p>Today's Bokkings</p>
-                    <p>4006</p>
-                    <p>10.00% (30 days)</p>
+    <main class="main-section" data-main-panel>
+        <div class="dashboard">
+            <div class="dashboard__header">
+                <div class="">
+                    <h3 class="header__title">Hello Piter!</h3>
+                    <h6 class="header__subtitle">All systems are running smoothly! You have <span>3 unread alerts!</span></h6>
+                </div>
+                <div class="header__calendar">
+                    <button class="header__btn">
+                        Today (10 Jan 2021)
+                        <i class="fa fa-angle-right"></i>
+                    </button>
                 </div>
             </div>
+            <div class="dashboard__wrapper">
+                <div class="weather-box">
+                    <img class="weather-box__background" src="./src/img/people.svg" alt="people">
+                    <div class="weather-info">
+                        <div class="">
+                            <i class="fa fa-sun-o" aria-hidden="true"></i>
+                            <h2>28<sup><i class="fa fa-circle" aria-hidden="true"></i></sup>C</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-box">
+                    <div class="card-body">
+                        <h5>Today's Bokkings</h5>
+                        <p>4006</p>
+                        <p>10.00% (30 days)</p>
+                    </div>
+                    <div class="card-body">
+                        <h5>Today's Bokkings</h5>
+                        <p>4006</p>
+                        <p>10.00% (30 days)</p>
+                    </div>
+                    <div class="card-body">
+                        <h5>Today's Bokkings</h5>
+                        <p>4006</p>
+                        <p>10.00% (30 days)</p>
+                    </div>
+                    <div class="card-body">
+                        <h5>Today's Bokkings</h5>
+                        <p>4006</p>
+                        <p>10.00% (30 days)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-box"></div>
+            <div class="order-details"></div>
+            <div class="sales-report"></div>
+            <div class="slider"></div>
+            <div class="top-products"></div>
+            <div class="todo-lists"></div>
+            <div class="projects"></div>
+            <div class="charts"></div>
+            <div class="notifications"></div>
+            <div class="advanced-table"></div>
         </div>
-        <div class="card-box"></div>
-        <div class="order-details"></div>
-        <div class="sales-report"></div>
-        <div class="slider"></div>
-        <div class="top-products"></div>
-        <div class="todo-lists"></div>
-        <div class="projects"></div>
-        <div class="charts"></div>
-        <div class="notifications"></div>
-        <div class="advanced-table"></div>
     </main>
     <footer>
         <span>Copyright © 2021. Premium Bootstrap admin template from BootstrapDash. All rights reserved.
