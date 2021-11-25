@@ -9,7 +9,8 @@
     border-left: 1px solid $color-4;
     transform: translateX(300px);
     transition: transform .3s ease-in-out;
-    z-index: 0;
+    z-index: 10;
+    overflow-y: scroll;
 
     &--active{
         transform: translateX(0);
@@ -69,7 +70,7 @@
             &__add-task{
                 padding: 20px 0;
                 display: flex;
-                justify-content: space-around;
+                justify-content: space-between;
     
                 input{
                     padding: 10px 10px;
@@ -138,6 +139,34 @@
 
                 &:hover{
                     color: $color-7;
+                }
+            }
+        }
+        // EVENTS section
+        .events{
+            &__title{
+                font-size: 26px;
+                font-weight: 300;
+                color: $color-4;
+                margin-bottom: 20px;
+            }
+            &__event-item{
+                margin-bottom: 20px;
+                .date{
+                    display: flex;
+                    align-items: center;
+
+                    p{
+                        margin-left: 10px;
+                        font-size: 20px;
+                        font-weight: 300;
+                    }
+                }
+                .event-description{
+                    font-size: 16px;
+                    font-weight: 300;
+                    color: $color-4;
+                    // margin-bottom: 10px;
                 }
             }
         }
