@@ -56,7 +56,10 @@
         height: auto;
         display: grid;
         grid-gap: 50px;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+        @include bp(medium){
+            grid-template-columns: repeat(2, 1fr);
+        }
 
 
         .weather-box{
@@ -86,10 +89,46 @@
                 padding: 20px;
                 background-color: red;
 
-                h5{
-                    color: $color-0;
+                &__title{
+                    color: $white;
                     font-size: 16px;
+                    margin-bottom: 15px;
                 }
+                &__value{
+                    color: $white;
+                    font-size: 26px;
+                }
+                &__percent-value{
+                    color: $white;
+                    font-size: 14px;
+                }
+
+                &:nth-child(1){
+                    background-color: #7DA0FA;
+
+                    &:hover{
+                        background-color: #93aff7;
+                    }
+                }
+                &:nth-child(2){
+                    background-color: #4747A1;
+                    &:hover {
+                        background-color: #5252a0;
+                    }
+                }
+                &:nth-child(3){
+                    background-color: #7978E9;
+                    &:hover{
+                        background-color: #9bb5f7;
+                    }
+                }
+                &:nth-child(4){
+                    background-color: #F3797E;
+                    &:hover{
+                        background-color: #f7898d;
+                    }
+                }
+            
             }
         }
     }
