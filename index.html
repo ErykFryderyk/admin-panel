@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Panel</title>
 
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./src/style/style.css">
 </head>
@@ -252,10 +253,52 @@
                     </div>
                 </div>
             </div>
-            <div class="card-box"></div>
-            <div class="order-details"></div>
-            <div class="sales-report"></div>
-            <div class="slider"></div>
+            <div class="second-section">
+                <div class="order-details">
+                    <div class="order-details__inner">
+                        <h3 class="order-details__title">Order Details</h3>
+                        <p class="order-details__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, fugiat voluptatibus possimus voluptas deserunt totam dolor velit voluptate animi non voluptates dicta, amet fugit illo!</p>
+                    </div>
+                    <div class="order-details__box">
+                        <div class="box-item">
+                            <p>Order value</p>
+                            <h4>12.3k</h4>
+                        </div>
+                        <div class="box-item">
+                            <p>Orders</p>
+                            <h4>15k</h4>
+                        </div>
+                        <div class="box-item">
+                            <p>User</p>
+                            <h4>83.54%</h4>
+                        </div>
+                        <div class="box-item">
+                            <p>Downloads</p>
+                            <h4>34034</h4>
+                        </div>
+                    </div>
+                    <div class="chart">
+                        <canvas id="my-chart"></canvas>
+                    </div>
+                </div>
+                <div class="sales-report">
+                    <div class="sales-report__inner">
+                        <h3 class="sales-report__title">Sales Report</h3>
+                        <a class="sales-report__link"href="#">View all</a>
+                        <p class="sales-report__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, fugiat voluptatibus possimus voluptas deserunt totam dolor velit voluptate animi non voluptates dicta, amet fugit illo!</p>
+                    </div>
+                    <div class="">
+                        <div class="chart">
+                            <canvas id="sales-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider">
+                <div class="slide">
+
+                </div>
+            </div>
             <div class="top-products"></div>
             <div class="todo-lists"></div>
             <div class="projects"></div>
@@ -273,6 +316,10 @@ Distributed by Themewagon</span>
         <i class="ti-settings"></i>
     </div>
 
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.0/dist/chart.min.js"></script>
+    <script src="./src/js/my-charts.js"></script>
     <script src="./src/js/main.js"></script>
 </body>
 </html>
