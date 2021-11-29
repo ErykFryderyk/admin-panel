@@ -108,7 +108,7 @@ li {
   z-index: 999; }
   @media only screen and (min-width: 576px) {
     .navbar {
-      grid-template-columns: 200px 1fr 110px;
+      grid-template-columns: 300px 1fr 110px;
       padding: 0px 30px; } }
   .navbar__brand {
     display: flex;
@@ -547,6 +547,16 @@ li {
   width: calc(100% - 300px);
   left: 300px; }
 
+.second-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column; }
+  @media only screen and (min-width: 992px) {
+    .second-section {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 30px; } }
+
 .dashboard {
   z-index: 0; }
   .dashboard__header {
@@ -587,8 +597,13 @@ li {
     width: 100%;
     height: auto;
     display: grid;
-    grid-gap: 50px;
-    grid-template-columns: repeat(2, 1fr); }
+    grid-gap: 30px;
+    grid-template-columns: 1fr;
+    margin-bottom: 30px; }
+    @media only screen and (min-width: 992px) {
+      .dashboard__wrapper {
+        grid-gap: 20px;
+        grid-template-columns: repeat(2, 1fr); } }
     .dashboard__wrapper .weather-box {
       position: relative;
       border-radius: 20px; }
@@ -603,11 +618,83 @@ li {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, 1fr);
-      grid-gap: 30px; }
+      grid-gap: 20px; }
       .dashboard__wrapper .card-box .card-body {
         border-radius: 20px;
         padding: 20px;
         background-color: red; }
-        .dashboard__wrapper .card-box .card-body h5 {
-          color: #ececec;
-          font-size: 16px; }
+        .dashboard__wrapper .card-box .card-body__title {
+          color: #fff;
+          font-size: 16px;
+          margin-bottom: 15px; }
+        .dashboard__wrapper .card-box .card-body__value {
+          color: #fff;
+          font-size: 26px; }
+        .dashboard__wrapper .card-box .card-body__percent-value {
+          color: #fff;
+          font-size: 14px; }
+        .dashboard__wrapper .card-box .card-body:nth-child(1) {
+          background-color: #7DA0FA; }
+          .dashboard__wrapper .card-box .card-body:nth-child(1):hover {
+            background-color: #93aff7; }
+        .dashboard__wrapper .card-box .card-body:nth-child(2) {
+          background-color: #4747A1; }
+          .dashboard__wrapper .card-box .card-body:nth-child(2):hover {
+            background-color: #5252a0; }
+        .dashboard__wrapper .card-box .card-body:nth-child(3) {
+          background-color: #7978E9; }
+          .dashboard__wrapper .card-box .card-body:nth-child(3):hover {
+            background-color: #9bb5f7; }
+        .dashboard__wrapper .card-box .card-body:nth-child(4) {
+          background-color: #F3797E; }
+          .dashboard__wrapper .card-box .card-body:nth-child(4):hover {
+            background-color: #f7898d; }
+  .dashboard .order-details {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px; }
+    .dashboard .order-details__inner {
+      margin-bottom: 20px; }
+    .dashboard .order-details__title {
+      font-size: 20px;
+      font-weight: 500;
+      color: #000;
+      margin-bottom: 10px; }
+    .dashboard .order-details__text {
+      font-size: 16px;
+      font-weight: 400;
+      color: #000; }
+    .dashboard .order-details__box {
+      display: flex;
+      flex-wrap: wrap; }
+      @media only screen and (min-width: 576px) {
+        .dashboard .order-details__box {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between; } }
+      .dashboard .order-details__box .box-item {
+        padding-right: 20px;
+        margin-bottom: 20px; }
+        .dashboard .order-details__box .box-item p {
+          font-size: 14px;
+          color: #6e6e6e; }
+        .dashboard .order-details__box .box-item h4 {
+          font-size: 30px;
+          color: #4B49AC;
+          font-weight: 600; }
+  .dashboard .sales-report {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px; }
+    .dashboard .sales-report__inner {
+      margin-bottom: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between; }
+    .dashboard .sales-report__title {
+      font-size: 20px;
+      font-weight: 500;
+      color: #000;
+      margin-bottom: 10px; }
+    .dashboard .sales-report__link {
+      color: #248AFD; }
