@@ -11,3 +11,19 @@
     width: calc(100% - 300px);
     left: 300px;
 }
+
+.second-section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    @include bp(medium){
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+    }
+}
+
+.third-section{
+
+}
