@@ -12,8 +12,7 @@
 body{
     color: black;
     background-color: $bgc;
-    font-family: 'Poppins',
-    sans-serif;
+    font-family: $font-primary
 }
 html {
     scroll-behavior: smooth;
