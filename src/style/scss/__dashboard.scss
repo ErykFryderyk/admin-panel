@@ -55,10 +55,13 @@
         width: 100%;
         height: auto;
         display: grid;
-        grid-gap: 50px;
+        grid-gap: 30px;
         grid-template-columns: 1fr;
+        margin-bottom: 30px;
         @include bp(medium){
+            grid-gap: 20px;
             grid-template-columns: repeat(2, 1fr);
+
         }
 
 
@@ -82,7 +85,7 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(2,1fr);
-            grid-gap:30px;
+            grid-gap: 20px;
 
             .card-body{
                 border-radius: 20px;
@@ -93,14 +96,25 @@
                     color: $white;
                     font-size: 16px;
                     margin-bottom: 15px;
+
+                    @include bp(large) {
+                        margin-bottom: 25px;
+                    }
                 }
                 &__value{
                     color: $white;
                     font-size: 26px;
+
+                    @include bp(large){
+                        font-size: 40px;
+                    }
                 }
                 &__percent-value{
                     color: $white;
                     font-size: 14px;
+                    @include bp(large) {
+                        font-size: 20px;
+                    }
                 }
 
                 &:nth-child(1){
@@ -129,6 +143,133 @@
                     }
                 }
             
+            }
+        }
+    }
+
+    .order-details{
+        background-color: $white;
+        padding: 20px;
+        border-radius: 20px;
+        margin-bottom: 50px;
+
+
+        &__title{
+            font-size: 20px;
+            font-weight: 500;
+            color: $black;
+            margin-bottom: 10px; 
+        }
+        &__text{
+            font-size: 16px;
+            font-weight: 400;
+            color: $black;
+        }
+        &__box{
+            display: flex;
+            flex-wrap: wrap;
+
+            @include bp(phone){
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .box-item{
+                padding-right: 20px;
+                margin-bottom: 20px;
+                p{
+                    font-size: 14px;
+                    color: $color-3;
+                }
+                h4{
+                    font-size: 30px;
+                    color: $color-5;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    .sales-report{
+        background-color: $white;
+        padding: 20px;
+        border-radius: 20px;
+                margin-bottom: 50px;
+
+        &__inner{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        &__title {
+            font-size: 20px;
+            font-weight: 500;
+            color: $black;
+            margin-bottom: 10px;
+        }
+        &__link{
+            color: $color-8;
+            margin-right: 5px;
+        }
+    }
+
+    .carousel{
+        background-color: $white;
+        border-radius: 20px;
+        padding: 20px;
+        position: relative;
+        &__control{
+            position: absolute;
+            right: 20px;
+        }
+        &__btn{
+            cursor: pointer;
+            height: 35px;
+            width: 35px;
+            display: inline-block;
+            text-align: center;
+            line-height: 1.35;
+            border-radius: 10px;
+            background-color: #0000001a;
+            color: $color-3;
+            font-size: 28px;
+            transition: background-color .2s ease;
+
+            &:hover{
+                background-color: #0000002d;
+            }
+        }
+
+        &__item{
+            margin-top: 25px;
+
+            .title{
+                font-size: 18px;
+                text-transform: capitalize;
+                margin-bottom: 12px;
+                color: $black;
+                font-weight: 600;
+            }
+            .value{
+                font-size: 42px;
+                color: $color-5;
+                font-weight: 600;
+                line-height: 1;
+                margin-bottom: 5px;
+                font-family: $font-secondary;
+            }
+            .label{
+                font-weight: 600;
+                font-size: 22px;
+                color: $color-5;
+                font-family: $font-secondary;
+                margin-bottom: 5px;
+            }
+            .text{
+                font-size: 14px;
+                color: $color-4;
+                margin-bottom: 25px;
             }
         }
     }
