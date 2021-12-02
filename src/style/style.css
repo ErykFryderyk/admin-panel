@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 *,
 *::before,
 *::after {
@@ -9,7 +9,7 @@
 body {
   color: black;
   background-color: #e9e9e9;
-  font-family: 'Poppins', sans-serif; }
+  font-family: "Poppins", sans-serif; }
 
 html {
   scroll-behavior: smooth; }
@@ -58,7 +58,7 @@ li {
 body {
   color: black;
   background-color: #e9e9e9;
-  font-family: 'Poppins', sans-serif; }
+  font-family: "Poppins", sans-serif; }
 
 html {
   scroll-behavior: smooth; }
@@ -557,6 +557,9 @@ li {
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 30px; } }
 
+.third-section {
+  width: 100%; }
+
 .dashboard {
   z-index: 0; }
   .dashboard__header {
@@ -627,12 +630,21 @@ li {
           color: #fff;
           font-size: 16px;
           margin-bottom: 15px; }
+          @media only screen and (min-width: 1600px) {
+            .dashboard__wrapper .card-box .card-body__title {
+              margin-bottom: 25px; } }
         .dashboard__wrapper .card-box .card-body__value {
           color: #fff;
           font-size: 26px; }
+          @media only screen and (min-width: 1600px) {
+            .dashboard__wrapper .card-box .card-body__value {
+              font-size: 40px; } }
         .dashboard__wrapper .card-box .card-body__percent-value {
           color: #fff;
           font-size: 14px; }
+          @media only screen and (min-width: 1600px) {
+            .dashboard__wrapper .card-box .card-body__percent-value {
+              font-size: 20px; } }
         .dashboard__wrapper .card-box .card-body:nth-child(1) {
           background-color: #7DA0FA; }
           .dashboard__wrapper .card-box .card-body:nth-child(1):hover {
@@ -652,9 +664,8 @@ li {
   .dashboard .order-details {
     background-color: #fff;
     padding: 20px;
-    border-radius: 20px; }
-    .dashboard .order-details__inner {
-      margin-bottom: 20px; }
+    border-radius: 20px;
+    margin-bottom: 50px; }
     .dashboard .order-details__title {
       font-size: 20px;
       font-weight: 500;
@@ -685,9 +696,9 @@ li {
   .dashboard .sales-report {
     background-color: #fff;
     padding: 20px;
-    border-radius: 20px; }
+    border-radius: 20px;
+    margin-bottom: 50px; }
     .dashboard .sales-report__inner {
-      margin-bottom: 20px;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between; }
@@ -697,4 +708,94 @@ li {
       color: #000;
       margin-bottom: 10px; }
     .dashboard .sales-report__link {
-      color: #248AFD; }
+      color: #248AFD;
+      margin-right: 5px; }
+  .dashboard .carousel {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    position: relative; }
+    .dashboard .carousel__control {
+      position: absolute;
+      right: 20px; }
+    .dashboard .carousel__btn {
+      cursor: pointer;
+      height: 35px;
+      width: 35px;
+      display: inline-block;
+      text-align: center;
+      line-height: 1.35;
+      border-radius: 10px;
+      background-color: #0000001a;
+      color: #6e6e6e;
+      font-size: 28px;
+      transition: background-color .2s ease; }
+      .dashboard .carousel__btn:hover {
+        background-color: #0000002d; }
+    .dashboard .carousel__item {
+      width: 100%;
+      margin-top: 25px;
+      display: flex;
+      flex-direction: column; }
+      @media only screen and (min-width: 992px) {
+        .dashboard .carousel__item {
+          display: grid;
+          grid-template-columns: 0.75fr 1fr 1fr;
+          grid-gap: 20px; } }
+      .dashboard .carousel__item .title {
+        font-size: 18px;
+        text-transform: capitalize;
+        margin-bottom: 12px;
+        color: #000;
+        font-weight: 600; }
+      .dashboard .carousel__item .value {
+        font-size: 42px;
+        color: #4B49AC;
+        font-weight: 600;
+        line-height: 1;
+        margin-bottom: 5px;
+        font-family: "Nunito", sans-serif; }
+      .dashboard .carousel__item .label {
+        font-weight: 600;
+        font-size: 22px;
+        color: #4B49AC;
+        font-family: "Nunito", sans-serif;
+        margin-bottom: 5px; }
+      .dashboard .carousel__item .text {
+        font-size: 14px;
+        color: #666666;
+        margin-bottom: 25px; }
+      .dashboard .carousel__item .skills__wrapper {
+        width: 100%;
+        margin-bottom: 10px;
+        display: grid;
+        grid-template-columns: 100px 1fr auto; }
+        @media only screen and (min-width: 992px) {
+          .dashboard .carousel__item .skills__wrapper {
+            margin-bottom: 30px; } }
+      .dashboard .carousel__item .skills__label {
+        font-size: 14px;
+        color: #666666; }
+      .dashboard .carousel__item .skills__progress {
+        width: 100%;
+        background-color: #b8b8b8;
+        height: 10px;
+        border-radius: 10px;
+        align-self: center;
+        position: relative; }
+      .dashboard .carousel__item .skills__progress-bar {
+        position: absolute;
+        height: 10px;
+        border-radius: 10px;
+        top: 0;
+        left: 0;
+        width: 40%; }
+        .dashboard .carousel__item .skills__progress-bar.bg-1 {
+          background-color: #4B49AC; }
+        .dashboard .carousel__item .skills__progress-bar.bg-2 {
+          background-color: #248AFD; }
+        .dashboard .carousel__item .skills__progress-bar.bg-3 {
+          background-color: #ffa500; }
+      .dashboard .carousel__item .skills__value {
+        margin-left: 10px;
+        text-align: right; }
