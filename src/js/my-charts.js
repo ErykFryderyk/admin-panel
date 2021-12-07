@@ -1,5 +1,6 @@
 const ctx = document.getElementById('my-chart').getContext('2d');
 const salesChart  = document.getElementById('sales-chart').getContext('2d');
+const ratingChart  = document.getElementById('rating-chart').getContext('2d');
 
 const myChart = new Chart(ctx, {
     type: 'line',
@@ -30,6 +31,25 @@ const myChart_1 = new Chart(salesChart, {
             data: [1200, 1900, 1000, 1231, 4324, 2345, 1232, 3123, 4321, 1234, 4123, 1261,],
             backgroundColor: [
                 'rgba(255, 229, 32, 1)',
+            ],
+        }]
+    },
+    options: {
+        responsive: true,
+    }
+});
+
+const myChart_2 = new Chart(ratingChart, {
+    type: 'doughnut',
+    data: {
+        labels: ['Offline sales', 'Online sales', 'Returns'],
+        datasets: [{
+            label: 'Earning',
+            data: [500, 100, 50],
+            backgroundColor: [
+                'rgba(0, 255, 32, 1)',
+                'rgba(0, 32, 255, 1)',
+                'rgba(255, 0, 32, 1)',
             ],
         }]
     },
