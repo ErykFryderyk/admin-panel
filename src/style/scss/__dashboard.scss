@@ -249,7 +249,7 @@
 
             @include bp(medium){
                 display: grid;
-                grid-template-columns: 0.75fr 1fr 1fr;
+                grid-template-columns: 0.75fr 1fr 2px .6fr;
                 grid-gap: 20px;
             }
 
@@ -333,6 +333,12 @@
                 width: 1px;
                 background-color: $color-1;
                 height: 100%;
+            }
+            .slider-chart{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
             }
         }
     }
