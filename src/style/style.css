@@ -740,7 +740,7 @@ li {
       @media only screen and (min-width: 992px) {
         .dashboard .carousel__item {
           display: grid;
-          grid-template-columns: 0.75fr 1fr 1fr;
+          grid-template-columns: 0.75fr 1fr 2px .6fr;
           grid-gap: 20px; } }
       .dashboard .carousel__item .title {
         font-size: 18px;
@@ -765,37 +765,48 @@ li {
         font-size: 14px;
         color: #666666;
         margin-bottom: 25px; }
-      .dashboard .carousel__item .skills__wrapper {
-        width: 100%;
-        margin-bottom: 10px;
-        display: grid;
-        grid-template-columns: 100px 1fr auto; }
-        @media only screen and (min-width: 992px) {
-          .dashboard .carousel__item .skills__wrapper {
-            margin-bottom: 30px; } }
-      .dashboard .carousel__item .skills__label {
-        font-size: 14px;
-        color: #666666; }
-      .dashboard .carousel__item .skills__progress {
-        width: 100%;
+      .dashboard .carousel__item .skills {
+        margin-top: 20px; }
+        .dashboard .carousel__item .skills__wrapper {
+          width: 100%;
+          margin-bottom: 10px;
+          display: grid;
+          grid-template-columns: 100px 1fr auto; }
+          @media only screen and (min-width: 992px) {
+            .dashboard .carousel__item .skills__wrapper {
+              margin-bottom: 30px; } }
+        .dashboard .carousel__item .skills__label {
+          font-size: 14px;
+          color: #666666; }
+        .dashboard .carousel__item .skills__progress {
+          width: 100%;
+          background-color: #b8b8b8;
+          height: 10px;
+          border-radius: 10px;
+          align-self: center;
+          position: relative; }
+        .dashboard .carousel__item .skills__progress-bar {
+          position: absolute;
+          height: 10px;
+          border-radius: 10px;
+          top: 0;
+          left: 0;
+          width: 40%; }
+          .dashboard .carousel__item .skills__progress-bar.bg-1 {
+            background-color: #4B49AC; }
+          .dashboard .carousel__item .skills__progress-bar.bg-2 {
+            background-color: #248AFD; }
+          .dashboard .carousel__item .skills__progress-bar.bg-3 {
+            background-color: #ffa500; }
+        .dashboard .carousel__item .skills__value {
+          margin-left: 10px;
+          text-align: right; }
+      .dashboard .carousel__item .divider {
+        width: 1px;
         background-color: #b8b8b8;
-        height: 10px;
-        border-radius: 10px;
-        align-self: center;
-        position: relative; }
-      .dashboard .carousel__item .skills__progress-bar {
-        position: absolute;
-        height: 10px;
-        border-radius: 10px;
-        top: 0;
-        left: 0;
-        width: 40%; }
-        .dashboard .carousel__item .skills__progress-bar.bg-1 {
-          background-color: #4B49AC; }
-        .dashboard .carousel__item .skills__progress-bar.bg-2 {
-          background-color: #248AFD; }
-        .dashboard .carousel__item .skills__progress-bar.bg-3 {
-          background-color: #ffa500; }
-      .dashboard .carousel__item .skills__value {
-        margin-left: 10px;
-        text-align: right; }
+        height: 100%; }
+      .dashboard .carousel__item .slider-chart {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%; }
