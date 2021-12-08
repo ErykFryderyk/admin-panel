@@ -118,7 +118,7 @@
                 }
 
                 &:nth-child(1){
-                    background-color: #7DA0FA;
+                    background-color: #7da0fa;
 
                     &:hover{
                         background-color: #93aff7;
@@ -195,7 +195,7 @@
         background-color: $white;
         padding: 20px;
         border-radius: 20px;
-                margin-bottom: 50px;
+        margin-bottom: 50px;
 
         &__inner{
             display: flex;
@@ -250,7 +250,7 @@
             @include bp(medium){
                 display: grid;
                 grid-template-columns: 0.75fr 1fr 2px .6fr;
-                grid-gap: 20px;
+                grid-gap: 2brows0px;
             }
 
             .title{
@@ -340,6 +340,50 @@
                 align-items: center;
                 width: 100%;
             }
+        }
+    }
+    .top-products{
+        background-color: $white;
+        padding: 20px;
+        border-radius: 20px;
+        margin-bottom: 50px;
+        &__title{
+            font-size: 18px;
+            color: $black;
+            font-weight: 600;
+            font-family: $font-primary;
+            margin-bottom: 20px;
+        }
+
+        &__table{
+
+            table{
+                width: 100%;
+                border-collapse: collapse;
+                border-spacing: 2px;
+                td, th{
+                    padding: 18px 22px;
+                }
+
+                thead th{
+                    font-weight: 500;
+                    font-size: 14px;
+                    text-align: left;
+                }
+
+                tbody tr td{
+                    font-weight: 300;
+                    font-family: $font-secondary;
+                    color: $black;
+                }
+
+                tbody tr:nth-of-type(odd){
+                    background-color: #f8f8f8;
+                    
+                }
+            }
+
+            
         }
     }
 }
