@@ -558,7 +558,8 @@ li {
       grid-gap: 30px; } }
 
 .third-section {
-  width: 100%; }
+  width: 100%;
+  margin-bottom: 50px; }
 
 .dashboard {
   z-index: 0; }
@@ -646,7 +647,7 @@ li {
             .dashboard__wrapper .card-box .card-body__percent-value {
               font-size: 20px; } }
         .dashboard__wrapper .card-box .card-body:nth-child(1) {
-          background-color: #7DA0FA; }
+          background-color: #7da0fa; }
           .dashboard__wrapper .card-box .card-body:nth-child(1):hover {
             background-color: #93aff7; }
         .dashboard__wrapper .card-box .card-body:nth-child(2) {
@@ -741,7 +742,7 @@ li {
         .dashboard .carousel__item {
           display: grid;
           grid-template-columns: 0.75fr 1fr 2px .6fr;
-          grid-gap: 20px; } }
+          grid-gap: 2brows0px; } }
       .dashboard .carousel__item .title {
         font-size: 18px;
         text-transform: capitalize;
@@ -810,3 +811,30 @@ li {
         justify-content: center;
         align-items: center;
         width: 100%; }
+  .dashboard .top-products {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 50px; }
+    .dashboard .top-products__title {
+      font-size: 18px;
+      color: #000;
+      font-weight: 600;
+      font-family: "Poppins", sans-serif;
+      margin-bottom: 20px; }
+    .dashboard .top-products__table table {
+      width: 100%;
+      border-collapse: collapse;
+      border-spacing: 2px; }
+      .dashboard .top-products__table table td, .dashboard .top-products__table table th {
+        padding: 18px 22px; }
+      .dashboard .top-products__table table thead th {
+        font-weight: 500;
+        font-size: 14px;
+        text-align: left; }
+      .dashboard .top-products__table table tbody tr td {
+        font-weight: 300;
+        font-family: "Nunito", sans-serif;
+        color: #000; }
+      .dashboard .top-products__table table tbody tr:nth-of-type(odd) {
+        background-color: #f8f8f8; }
