@@ -47,9 +47,9 @@ const myChart_2 = new Chart(ratingChart, {
             label: 'Earning',
             data: [500, 100, 50],
             backgroundColor: [
-                'rgba(0, 255, 32, 1)',
-                'rgba(0, 32, 255, 1)',
-                'rgba(255, 0, 32, 1)',
+                '#7da0fa',
+                '#7978E9',
+                '#F3797E',
             ],
         }]
     },
