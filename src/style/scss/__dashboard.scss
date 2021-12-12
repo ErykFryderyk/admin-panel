@@ -219,6 +219,7 @@
         border-radius: 20px;
         padding: 20px;
         position: relative;
+
         &__control{
             position: absolute;
             right: 20px;
@@ -250,7 +251,7 @@
             @include bp(medium){
                 display: grid;
                 grid-template-columns: 0.75fr 1fr 2px .6fr;
-                grid-gap: 2brows0px;
+                grid-gap: 20px;
             }
 
             .title{
@@ -283,6 +284,11 @@
 
             .skills{
                 margin-top: 20px;
+                margin-bottom: 50px;
+
+                @include bp(medium){
+                    margin-bottom: 0;
+                }
                 
                 &__wrapper{
                     width: 100%;
@@ -347,6 +353,12 @@
         padding: 20px;
         border-radius: 20px;
         margin-bottom: 50px;
+        width: 100%;
+        overflow-x: scroll;
+
+        @include bp(small){
+            overflow:visible;
+        }
         &__title{
             font-size: 18px;
             color: $black;
@@ -358,9 +370,13 @@
         &__table{
 
             table{
-                width: 100%;
+                min-width: 580px;
                 border-collapse: collapse;
                 border-spacing: 2px;
+
+                @include bp(small){
+                    width: 100%;
+                }
                 td, th{
                     padding: 18px 22px;
                 }
@@ -375,6 +391,27 @@
                     font-weight: 300;
                     font-family: $font-secondary;
                     color: $black;
+
+                    &:nth-of-type(2){
+                        font-weight: bold;
+                    }
+                }
+                .status{
+                    padding: 5px 7px;
+                    border-radius: 15px;
+                    font-size: 14px;
+                    &--completed{
+                        color: $color-0;
+                        background-color: $color-10;
+                    }
+                    &--pending{
+                        color: $black;
+                        background-color: $color-9;
+                    }
+                    &--cancelled{
+                        color: $color-0;
+                        background-color: $color-11;
+                    }
                 }
 
                 tbody tr:nth-of-type(odd){
@@ -384,6 +421,99 @@
             }
 
             
+        }
+    }
+    //TODO-APP element
+    .todo-app {
+
+        &__add-task {
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+
+            input {
+                padding: 10px 10px;
+                border-radius: 10px;
+                border: 1px solid $color-3;
+                background-color: transparent;
+                outline: none;
+                font-size: 14px;
+            }
+
+            button {
+                border: none;
+                border-radius: 10px;
+                background-color: $color-5;
+                padding: 0 20px;
+                cursor: pointer;
+                color: $color-0;
+                transition: background-color .2s ease-in-out;
+
+                &:hover {
+                    background-color: $color-6;
+                }
+            }
+
+
+        }
+
+        &__list {
+            margin-bottom: 20px;
+            overflow-y: auto;
+            max-height: 300px;
+
+            &::-webkit-scrollbar {
+                width: 3px;
+            }
+
+            &::-webkit-scrollbar-track {
+                box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: darkgrey;
+                outline: 1px solid slategrey;
+                border-radius: 10px;
+            }
+        }
+
+        &__item {
+            border: 1px solid $color-3;
+            border-radius: 10px;
+            padding: 15px 10px;
+            margin-bottom: 7px;
+            position: relative;
+        }
+
+        &__checkbox {
+            // Custom style
+        }
+
+        &__remove-item {
+            border: none;
+            outline: none;
+            cursor: pointer;
+            position: absolute;
+            font-size: 20px;
+            top: 15px;
+            right: 20px;
+            transition: color .2s ease-in-out;
+
+            &:hover {
+                color: $color-3;
+            }
+        }
+    }
+    .card{
+        background-color: $white;
+        border-radius: 20px;
+        padding: 20px;
+
+        &__title{
+            font-size: 20px;
+            font-weight: 500;
+            color: $black;
+            margin-bottom: 10px;
         }
     }
 }
