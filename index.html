@@ -360,7 +360,7 @@
                     </div>
                 </div>
             </div>
-            <div class="second-section">
+            <div class="section section--col-2">
                 <div class="top-products">
                     <h4 class="top-products__title">Top products</h4>
                     <div class="top-products__table">
@@ -378,60 +378,325 @@
                                     <td>Search Engine Marketing</td>
                                     <td>$350</td>
                                     <td>21 Sep 2021</td>
-                                    <td>Completed</td>
+                                    <td><span class="status status--completed">Completed</span></td>
                                 </tr>
                                 <tr>
                                     <td>Search Engine Optimization</td>
                                     <td>$200</td>
                                     <td>10 Jun 2021</td>
-                                    <td>Completed</td>
+                                    <td><span class="status status--completed">Completed</span></td>
                                 </tr>
                                 <tr>
                                     <td>Display Advertising</td>
                                     <td>$150</td>
                                     <td>21 Oct 2021</td>
-                                    <td>Pending</td>
+                                    <td><span class="status status--pending">Pending</span></td>
                                 </tr>
                                 <tr>
                                     <td>Pay Per Click Advertising</td>
                                     <td>$340</td>
                                     <td>21 Sep 2021</td>
-                                    <td>Pending</td>
+                                    <td><span class="status status--pending">Pending</span></td>
                                 </tr>
                                 <tr>
                                     <td>Referral Marketing</td>
                                     <td>$897</td>
                                     <td>01 Mar 2021</td>
-                                    <td>Cencelled</td>
+                                    <td><span class="status status--cancelled">Cancelled</span></td>
                                 </tr>
                                 <tr>
                                     <td>Social media marketing</td>
                                     <td>$781</td>
                                     <td>21 Feb 2021</td>
-                                    <td>Pending</td>
+                                    <td><span class="status status--pending">Pending</span></td>
                                 </tr>
                                 <tr>
                                     <td>Search Engine Marketing</td>
                                     <td>$350</td>
                                     <td>21 Sep 2021</td>
-                                    <td>Completed</td>
+                                    <td><span class="status status--completed">Completed</span></td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
-                <div class="">
+                <div class="todo-list">
                     <h4>To Do Lists</h4>
                     <div class="todo-app">
-
+                        <div class="todo-app__add-task">
+                            <input type="text" placeholder="Add task">
+                            <button class="">Add</button>
+                        </div>
+                        <div class="todo-app__list">
+                            <ul>
+                                <li class="todo-app__item">
+                                    <input class="todoapp__checkbox" type="checkbox" name="" id="">
+                                    <span class="todo-app__task-name">Wynieść śmieci</span>
+                                    <button class="todo-app__remove-item"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                                </li>
+                                <li class="todo-app__item">
+                                    <input type="checkbox" name="" id="">
+                                    <span class="todo-app__task-name">Wynieść śmieci</span>
+                                    <button class="todo-app__remove-item"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                                </li>
+                                <li class="todo-app__item">
+                                    <input type="checkbox" name="" id="">
+                                    <span class="todo-app__task-name">Wynieść śmieci</span>
+                                    <button class="todo-app__remove-item"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                                </li>
+                                <li class="todo-app__item">
+                                    <input type="checkbox" name="" id="">
+                                    <span class="todo-app__task-name">Wynieść śmieci</span>
+                                    <button class="todo-app__remove-item"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="todo-lists"></div>
-            <div class="projects"></div>
-            <div class="charts"></div>
-            <div class="notifications"></div>
-            <div class="advanced-table"></div>
+            <div class="section section--col-3">
+                <div class="card">
+                    <h4 class="card__title">Projects</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Places</th>
+                                <th>Orders</th>
+                                <th>Users</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Kentucky</td>
+                                <td><b>65</b> (2.15%)</td>
+                                <td>65</td>
+                            </tr>
+                            <tr>
+                                <td>Ohio</td>
+                                <td><b>65</b> (2.15%)</td>
+                                <td>56</td>
+                            </tr>
+                            <tr>
+                                <td>Nevada</td>
+                                <td><b>65</b> (2.15%)</td>
+                                <td>34</td>
+                            </tr>
+                            <tr>
+                                <td>Nort Carolina</td>
+                                <td><b>65</b> (2.15%)</td>
+                                <td>12</td>
+                            </tr>
+                            <tr>
+                                <td>Montana</td>
+                                <td><b>65</b> (2.15%)</td>
+                                <td>32</td>
+                            </tr>
+                            <tr>
+                                <td>Nevada</td>
+                                <td><b>65</b> (2.15%)</td>
+                                <td>43</td>
+                            </tr>
+                            <tr>
+                                <td>Lusisiana</td>
+                                <td><b>65</b> (2.15%)</td>
+                                <td>12</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="card">
+                    <h4 class="card__title">Charts</h4>
+                    <div class="charts">
+                        <ul>
+                            <li>
+                                <p>Data 1</p>
+                                <div class="">
+                                    <div class=""></div>
+                                    <p>5k</p>
+                                </div>
+                            </li>
+                            <li>
+                                <p>Data 2</p>
+                                <div class="">
+                                    <div class=""></div>
+                                    <p>5k</p>
+                                </div>
+                            </li>
+                            <li>
+                                <p>Data 3</p>
+                                <div class="">
+                                    <div class=""></div>
+                                    <p>5k</p>
+                                </div>
+                            </li>
+                            <li>
+                                <p>Data 4</p>
+                                <div class="">
+                                    <div class=""></div>
+                                    <p>5k</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="">
+                        <h4>Numbers Of Meetings</h4>
+                        <div class="">
+                            <div class="">
+                                <p>34040</p>
+                                <p>The total number of sessions within the date range.It is calculated as the sum.</p>
+                            </div>
+                            <div class="">
+                                <img src="" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h4 class="card__title">Notofications</h4>
+                    <ul>
+                        <li>
+                            <div class="">
+                                <img src="" alt="">
+                                <div class="">
+                                    <p>Isabella Becker</p>
+                                    <p>Sales dashboard have been created</p>
+                                    <small>9:00 am</small>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="">
+                                <img src="" alt="">
+                                <div class="">
+                                    <p>Isabella Becker</p>
+                                    <p>Sales dashboard have been created</p>
+                                    <small>9:00 am</small>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="">
+                                <img src="" alt="">
+                                <div class="">
+                                    <p>Isabella Becker</p>
+                                    <p>Sales dashboard have been created</p>
+                                    <small>9:00 am</small>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="">
+                                <img src="" alt="">
+                                <div class="">
+                                    <p>Isabella Becker</p>
+                                    <p>Sales dashboard have been created</p>
+                                    <small>9:00 am</small>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="">
+                                <img src="" alt="">
+                                <div class="">
+                                    <p>Isabella Becker</p>
+                                    <p>Sales dashboard have been created</p>
+                                    <small>9:00 am</small>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>  
+                </div>
+            </div>
+            <div class="section section--col-1">
+                <div class="card">
+                    <h4 class="card__title">Adcanced Table</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Quote</th>
+                                <th>Product</th>
+                                <th>Business type</th>
+                                <th>Policy holder</th>
+                                <th>Premium</th>
+                                <th>Status</th>
+                                <th>Updated at</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Incs100</td>
+                                <td>Car insurance</td>
+                                <td>Business type 1</td>
+                                <td>Jesse Thomas</td>
+                                <td>$2000</td>
+                                <td>In progress</td>
+                                <td>12/02.2021</td>
+                                <td>^</td>
+                            </tr>
+                            <tr>
+                                <td>Incs100</td>
+                                <td>Car insurance</td>
+                                <td>Business type 1</td>
+                                <td>Jesse Thomas</td>
+                                <td>$2000</td>
+                                <td>In progress</td>
+                                <td>12/02.2021</td>
+                                <td>^</td>
+                            </tr>
+                            <tr>
+                                <td>Incs100</td>
+                                <td>Car insurance</td>
+                                <td>Business type 1</td>
+                                <td>Jesse Thomas</td>
+                                <td>$2000</td>
+                                <td>In progress</td>
+                                <td>12/02.2021</td>
+                                <td>^</td>
+                            </tr>
+                            <tr>
+                                <td>Incs100</td>
+                                <td>Car insurance</td>
+                                <td>Business type 1</td>
+                                <td>Jesse Thomas</td>
+                                <td>$2000</td>
+                                <td>In progress</td>
+                                <td>12/02.2021</td>
+                                <td>^</td>
+                            </tr>
+                            <tr>
+                                <td>Incs100</td>
+                                <td>Car insurance</td>
+                                <td>Business type 1</td>
+                                <td>Jesse Thomas</td>
+                                <td>$2000</td>
+                                <td>In progress</td>
+                                <td>12/02.2021</td>
+                                <td>^</td>
+                            </tr>
+                            <tr>
+                                <td>Incs100</td>
+                                <td>Car insurance</td>
+                                <td>Business type 1</td>
+                                <td>Jesse Thomas</td>
+                                <td>$2000</td>
+                                <td>In progress</td>
+                                <td>12/02.2021</td>
+                                <td>^</td>
+                            </tr>
+                            <tr>
+                                <td>Incs100</td>
+                                <td>Car insurance</td>
+                                <td>Business type 1</td>
+                                <td>Jesse Thomas</td>
+                                <td>$2000</td>
+                                <td>In progress</td>
+                                <td>12/02.2021</td>
+                                <td>^</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </main>
     <footer>
