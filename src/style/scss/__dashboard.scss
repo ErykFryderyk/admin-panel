@@ -359,6 +359,7 @@
         @include bp(small){
             overflow:visible;
         }
+
         &__title{
             font-size: 18px;
             color: $black;
@@ -400,6 +401,7 @@
                     padding: 5px 7px;
                     border-radius: 15px;
                     font-size: 14px;
+
                     &--completed{
                         color: $color-0;
                         background-color: $color-10;
@@ -418,9 +420,7 @@
                     background-color: #f8f8f8;
                     
                 }
-            }
-
-            
+            }    
         }
     }
     //TODO-APP element
@@ -504,16 +504,151 @@
             }
         }
     }
+
+    // main CARDS
     .card{
         background-color: $white;
         border-radius: 20px;
         padding: 20px;
+        margin-bottom: 50px;
 
         &__title{
             font-size: 20px;
             font-weight: 500;
             color: $black;
             margin-bottom: 10px;
+
+            &--white{
+                color: $color-0;
+            }
+        }
+    }
+
+    // PROJECTS table
+    .project-table{
+        background-color: $white;
+        padding: 20px;
+        border-radius: 20px;
+        width: 100%;
+        overflow-x: scroll;
+        border-collapse: collapse;
+
+        thead{
+            border-spacing: 2px;
+            text-align: left;
+            
+            th{
+                border-bottom: 1px solid $color-1;
+            }
+        }
+        td{
+            padding: 14px 0px;
+        }
+        td{
+            font-size: 14px;
+        }
+
+        @include bp(small) {
+            overflow: visible;
+        }
+    }
+
+    .charts{
+        margin-bottom: 20px;
+
+        &__item{
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__label{
+            font-size: 14px;
+            font-family: $font-secondary;
+        }
+
+        &__bar{
+            display: flex;
+        }
+        &__progress-bar{
+            width: 100%;
+            background-color: #b8b8b8;
+            height: 10px;
+            border-radius: 10px;
+            align-self: center;
+            position: relative;
+        }
+        &__progress-inner{
+            position: absolute;
+            height: 10px;
+            width: 40%;
+            border-radius: 10px;
+
+            &--bg-1{
+                background-color: #4B49AC;
+            }
+        }
+        &__value{
+            font-size: 16px;
+            font-family: $font-primary;
+            margin-left:15px;
+        }
+    }
+    .box-in-chart{
+        background-color: #4B49AC;
+        border-radius: 20px;
+        padding: 20px;
+
+        &__inner{
+            display: grid;
+            grid-template-columns: .7fr .3fr;
+        }
+        &__item{
+            display: flex;
+            flex-direction: column;
+        }
+        &__subtitle{
+            font-size: 28px;
+            color: $color-0;
+        }
+        &__text{
+            font-size: 14px;
+            color: $color-0;
+        }
+    }
+    // NOTiFICATION
+    .icon-data-list{
+
+
+        &__item{
+            display: grid;
+            grid-template-columns: auto 1fr;
+            grid-gap: 20px;
+            margin-bottom: 10px;
+        }
+        &__avatar{
+            width: 50px;    
+            height: 50px;
+            border-radius: 50%;
+        }
+        &__info{
+            display: flex;
+            flex-direction: column;    
+        }
+        &__name{
+            font-size: 15px;
+            color: $color-8;
+            font-family: $font-secondary;
+            margin-bottom: 7px;
+        }
+        &__description{
+            font-size: 15px;
+            font-family: $font-secondary;
+            margin-bottom: 5px;
+        }
+        &__time{
+            font-family: $font-secondary;
+            font-size: 14px;
+            color: $color-3;
         }
     }
 }
