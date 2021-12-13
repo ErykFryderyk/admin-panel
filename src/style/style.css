@@ -936,9 +936,100 @@ li {
   .dashboard .card {
     background-color: #fff;
     border-radius: 20px;
-    padding: 20px; }
+    padding: 20px;
+    margin-bottom: 50px; }
     .dashboard .card__title {
       font-size: 20px;
       font-weight: 500;
       color: #000;
       margin-bottom: 10px; }
+      .dashboard .card__title--white {
+        color: #ececec; }
+  .dashboard .project-table {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    width: 100%;
+    overflow-x: scroll;
+    border-collapse: collapse; }
+    .dashboard .project-table thead {
+      border-spacing: 2px;
+      text-align: left; }
+      .dashboard .project-table thead th {
+        border-bottom: 1px solid #b8b8b8; }
+    .dashboard .project-table td {
+      padding: 14px 0px; }
+    .dashboard .project-table td {
+      font-size: 14px; }
+    @media only screen and (min-width: 768px) {
+      .dashboard .project-table {
+        overflow: visible; } }
+  .dashboard .charts {
+    margin-bottom: 20px; }
+    .dashboard .charts__item {
+      display: flex;
+      flex-direction: column; }
+    .dashboard .charts__label {
+      font-size: 14px;
+      font-family: "Nunito", sans-serif; }
+    .dashboard .charts__bar {
+      display: flex; }
+    .dashboard .charts__progress-bar {
+      width: 100%;
+      background-color: #b8b8b8;
+      height: 10px;
+      border-radius: 10px;
+      align-self: center;
+      position: relative; }
+    .dashboard .charts__progress-inner {
+      position: absolute;
+      height: 10px;
+      width: 40%;
+      border-radius: 10px; }
+      .dashboard .charts__progress-inner--bg-1 {
+        background-color: #4B49AC; }
+    .dashboard .charts__value {
+      font-size: 16px;
+      font-family: "Poppins", sans-serif;
+      margin-left: 15px; }
+  .dashboard .box-in-chart {
+    background-color: #4B49AC;
+    border-radius: 20px;
+    padding: 20px; }
+    .dashboard .box-in-chart__inner {
+      display: grid;
+      grid-template-columns: .7fr .3fr; }
+    .dashboard .box-in-chart__item {
+      display: flex;
+      flex-direction: column; }
+    .dashboard .box-in-chart__subtitle {
+      font-size: 28px;
+      color: #ececec; }
+    .dashboard .box-in-chart__text {
+      font-size: 14px;
+      color: #ececec; }
+  .dashboard .icon-data-list__item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 20px;
+    margin-bottom: 10px; }
+  .dashboard .icon-data-list__avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; }
+  .dashboard .icon-data-list__info {
+    display: flex;
+    flex-direction: column; }
+  .dashboard .icon-data-list__name {
+    font-size: 15px;
+    color: #248AFD;
+    font-family: "Nunito", sans-serif;
+    margin-bottom: 7px; }
+  .dashboard .icon-data-list__description {
+    font-size: 15px;
+    font-family: "Nunito", sans-serif;
+    margin-bottom: 5px; }
+  .dashboard .icon-data-list__time {
+    font-family: "Nunito", sans-serif;
+    font-size: 14px;
+    color: #6e6e6e; }
