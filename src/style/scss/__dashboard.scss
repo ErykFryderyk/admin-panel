@@ -513,10 +513,10 @@
         margin-bottom: 50px;
 
         &__title{
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 500;
             color: $black;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
 
             &--white{
                 color: $color-0;
@@ -649,6 +649,65 @@
             font-family: $font-secondary;
             font-size: 14px;
             color: $color-3;
+        }
+    }
+
+    // Adcanced Table
+    .advanced-table{
+        background-color: $white;
+        width: 100%;
+        overflow-x: scroll;
+
+        @include bp(medium) {
+            overflow: visible;
+        }
+
+        table{
+            min-width: 820px;
+            border-collapse: collapse;
+            border-spacing: 2px;
+
+            @include bp(medium){
+                min-width: 100%;
+            }
+            
+
+            thead{
+                text-align: left;
+                background-color: $color-5;
+                padding: 5px;
+                border-radius: 10px;
+                
+                th{
+                    color: $white;
+                    font-size: 15px;
+                    font-family: $font-secondary;
+                    padding: 10px;
+                    &:first-child{
+                        border-radius: 8px 0 0 8px;
+                    }
+                    &:last-child{
+                        width: 22px;
+                        border-radius: 0 8px 8px 0;
+                    }
+                }
+            }
+            tbody{
+                tr{
+                    &:nth-of-type(even) {
+                        background-color: $color-0;
+                    }
+                }
+                td{
+                    padding: 10px;
+                    font-family: $font-secondary;
+                    font-weight: 300;
+                    font-size: 14px;
+                    margin-bottom: 5px;
+
+                    
+                }
+            }
         }
     }
 }
