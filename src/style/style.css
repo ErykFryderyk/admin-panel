@@ -939,10 +939,10 @@ li {
     padding: 20px;
     margin-bottom: 50px; }
     .dashboard .card__title {
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 500;
       color: #000;
-      margin-bottom: 10px; }
+      margin-bottom: 20px; }
       .dashboard .card__title--white {
         color: #ececec; }
   .dashboard .project-table {
@@ -1033,3 +1033,40 @@ li {
     font-family: "Nunito", sans-serif;
     font-size: 14px;
     color: #6e6e6e; }
+  .dashboard .advanced-table {
+    background-color: #fff;
+    width: 100%;
+    overflow-x: scroll; }
+    @media only screen and (min-width: 992px) {
+      .dashboard .advanced-table {
+        overflow: visible; } }
+    .dashboard .advanced-table table {
+      min-width: 820px;
+      border-collapse: collapse;
+      border-spacing: 2px; }
+      @media only screen and (min-width: 992px) {
+        .dashboard .advanced-table table {
+          min-width: 100%; } }
+      .dashboard .advanced-table table thead {
+        text-align: left;
+        background-color: #4B49AC;
+        padding: 5px;
+        border-radius: 10px; }
+        .dashboard .advanced-table table thead th {
+          color: #fff;
+          font-size: 15px;
+          font-family: "Nunito", sans-serif;
+          padding: 10px; }
+          .dashboard .advanced-table table thead th:first-child {
+            border-radius: 8px 0 0 8px; }
+          .dashboard .advanced-table table thead th:last-child {
+            width: 22px;
+            border-radius: 0 8px 8px 0; }
+      .dashboard .advanced-table table tbody tr:nth-of-type(even) {
+        background-color: #ececec; }
+      .dashboard .advanced-table table tbody td {
+        padding: 10px;
+        font-family: "Nunito", sans-serif;
+        font-weight: 300;
+        font-size: 14px;
+        margin-bottom: 5px; }
