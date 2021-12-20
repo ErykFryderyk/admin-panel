@@ -2,25 +2,32 @@
 
 .sidebar{
     position: fixed;
+    padding-top: 20px;
     top: 50px;
     left: 0;
     bottom: 0;
-    width: 300px;
-    height: 100vh;
-    background-color: #fff;
+    right: 0;
+    z-index: 20;
+    width: 100%;
+    transform: translate(-100%);
+    height: calc(100vh - 50px);
+    background-color: $white;
     transition: all .3s ease-in-out;
+
+    @include bp(small){
+        width: 300px;
+    }
 
     ul{
         padding: 20px 0 0 20px;
         li{
             a{
-                color: black;
+                color: $color-3;
             }
         }
     }
 
     .change-mode-wrapper{
-        margin-top: 20px;
         padding: 0 20px;
         width: 100%;
         display: flex;
@@ -104,15 +111,10 @@
     }
 }
 
-.sidebar.toggle{
-    transform: translate(-300px);
+.sidebar.sidebar-active{
+    transform: translate(0);
 
-    @include bp(phone){
-        transform: translate(-250px);
-        .nav__arrow,
-        .nav__title{
-            display: none;
-        }
+    @include bp(small){
         .nav__icon{
             margin-left: auto;
             margin-right: 0;

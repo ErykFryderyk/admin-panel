@@ -2,20 +2,21 @@
     position: fixed;
     width: 300px;
     height: 100%;
-    background-color: $color-0;
+    background-color: $white;
+    
     top: 50px;
     right: 0;
     bottom: 0;
-    border-left: 1px solid $color-4;
+    border-left: 1px solid $color-1;
     transform: translateX(300px);
-    transition: transform .3s ease-in-out;
+    transition: transform .3s ease-in-out, box-shadow .3s ease;
     z-index: 10;
     overflow-y: scroll;
 
     &--active{
         transform: translateX(0);
+        box-shadow: $box-shadow;
     }
-
 
     &__close-btn{
         position: absolute;
@@ -25,6 +26,7 @@
         font-size: 25px;
         outline: none;
         padding: 5px;
+        color: $color-1;
         cursor: pointer;
         border: none;
         transition: transform .3s ease-in-out;
@@ -37,7 +39,7 @@
     &__nav{
         width: 100%;
         height: 50px;
-        border-bottom: 1px solid $color-1;
+        border-bottom: 1px solid $color-0;
 
         .nav{
             display: flex;
@@ -45,15 +47,25 @@
             padding-right: 50px;
             justify-content: space-around;
             align-items: center;
+
             &__item{
             }
             &__link{
                 padding: 2px;
-                color: black;
+                color: $color-1;
                 text-transform: uppercase;
+
+                &:hover{
+                    color: $color-3;
+                }
 
                 &--active{
                     color: $color-5;
+                    
+                    &:hover{
+                        color:$color-6;
+                    }
+
                 }
             }
         }
@@ -75,7 +87,7 @@
                 input{
                     padding: 10px 10px;
                     border-radius: 10px;
-                    border: 1px solid $color-3;
+                    border: 1px solid $color-1;
                     background-color: transparent;
                     outline: none;
                     font-size: 14px;
@@ -85,16 +97,15 @@
                     border-radius: 10px;
                     background-color: $color-5;
                     padding: 0 20px;
+                    font-family: $font-secondary;
                     cursor: pointer;
-                    color: $color-0;
+                    color: $white;
                     transition: background-color .2s ease-in-out;
 
                     &:hover{
                         background-color: $color-6;
                     }
                 }
-
-                
             }
 
             &__list{
@@ -102,6 +113,7 @@
                 overflow-y: auto;
                 max-height: 300px;
 
+                // CUSTOM SCROLLBAR
                 &::-webkit-scrollbar {
                     width: 3px;
                 }
@@ -118,12 +130,13 @@
             }
 
             &__item{
-                border:1px solid $color-3;
+                border:1px solid $color-1;
                 border-radius: 10px;
                 padding: 15px 10px;
                 margin-bottom: 7px;
                 position: relative;
             }
+
             &__checkbox{
                 // Custom style
             }
@@ -136,13 +149,19 @@
                 top: 15px;
                 right: 20px;
                 transition: color .2s ease-in-out;
+                background-color: $white;
 
-                &:hover{
+                i{
                     color: $color-3;
+                    transition: color .3s ease;
+
+                    &:hover{
+                        color: $color-9;
+                    }
                 }
             }
         }
-        // EVENTS section
+        // EVENTS SECTION
         .events{
             &__title{
                 font-size: 26px;
