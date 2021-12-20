@@ -1,7 +1,9 @@
 'use strict';
 
 const hamburger = document.querySelector('.hamburger');
+const body = document.querySelector('body'); 
 const sidebar = document.querySelector('.sidebar');
+const mainPanel = document.querySelector('[data-main-panel]');
 const dropdownBtn = document.querySelector('[data-dropdown-btn]');
 const profileBtn = document.querySelector('[data-profile-btn]');
 const dropdown = document.querySelector('[data-dropdown]');
@@ -13,7 +15,9 @@ const settingsSidebar = document.querySelector('[data-right-sidebar]');
 
 const toggleFunction = () => {
     
-    sidebar.classList.toggle('toggle');
+    sidebar.classList.toggle('sidebar-active');
+    mainPanel.classList.toggle('panel-active');
+    body.classList.toggle('mobile-nav-active');
 }
 
 const showDropdown = (el) => {
