@@ -7,9 +7,16 @@
   padding: 0; }
 
 body {
+  position: relative;
   color: black;
   background-color: #e9e9e9;
   font-family: "Poppins", sans-serif; }
+
+.mobile-nav-active {
+  overflow: hidden; }
+  @media only screen and (min-width: 768px) {
+    .mobile-nav-active {
+      overflow: visible; } }
 
 html {
   scroll-behavior: smooth; }
@@ -56,9 +63,16 @@ li {
   padding: 0; }
 
 body {
+  position: relative;
   color: black;
   background-color: #e9e9e9;
   font-family: "Poppins", sans-serif; }
+
+.mobile-nav-active {
+  overflow: hidden; }
+  @media only screen and (min-width: 768px) {
+    .mobile-nav-active {
+      overflow: visible; } }
 
 html {
   scroll-behavior: smooth; }
@@ -104,8 +118,9 @@ li {
   padding: 0 15px;
   display: grid;
   grid-template-columns: .5fr 1fr .5fr;
-  background-color: #b8b8b8;
-  z-index: 999; }
+  background-color: #fff;
+  z-index: 999;
+  box-shadow: 0 0 10px 0px #b8b8b8; }
   @media only screen and (min-width: 576px) {
     .navbar {
       grid-template-columns: 300px 1fr 110px;
@@ -116,54 +131,63 @@ li {
     align-items: center; }
     .navbar__brand i {
       font-size: 30px;
-      color: white; }
+      color: #248AFD; }
     .navbar__brand label {
-      color: white;
-      font-size: 20px;
+      color: #6e6e6e;
       margin-left: 10px;
       transform: translate(-100%);
       opacity: 0;
-      transition: all .3s .3s; }
+      transition: all .3s;
+      z-index: -1;
+      font-family: "Nunito", sans-serif; }
       @media only screen and (min-width: 576px) {
         .navbar__brand label {
-          display: block;
+          font-size: 14px;
           transform: translate(0);
           opacity: 1; } }
+      @media only screen and (min-width: 992px) {
+        .navbar__brand label {
+          font-size: 16px; } }
+      @media only screen and (min-width: 1200px) {
+        .navbar__brand label {
+          font-size: 20px; } }
   .navbar__menu {
     display: flex;
     align-items: center;
     height: 50px; }
     .navbar__menu .hamburger {
-      font-size: 30px;
+      font-size: 25px;
       cursor: pointer;
       background-color: transparent;
       border: none; }
       .navbar__menu .hamburger i {
-        color: white; }
+        color: #b8b8b8; }
     .navbar__menu .search {
       margin-left: 20px;
       display: flex;
       position: relative; }
       .navbar__menu .search i {
-        color: white;
+        color: #6e6e6e;
         position: absolute;
+        z-index: -1;
         top: 5px;
         left: 8px; }
       .navbar__menu .search input {
         border: none;
         outline: none;
         font-size: 16px;
+        font-weight: 300;
         letter-spacing: 1px;
         background-color: transparent;
         border-radius: 30px;
         height: 30px;
         padding-left: 30px;
-        color: white;
+        color: #6e6e6e;
         transition: .3s; }
         .navbar__menu .search input:focus, .navbar__menu .search input:hover {
-          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); }
+          box-shadow: 0px 0px 10px #00000033; }
         .navbar__menu .search input::placeholder {
-          color: white; }
+          color: #b8b8b8; }
   .navbar__settings {
     display: flex;
     align-items: center;
@@ -183,18 +207,21 @@ li {
         cursor: pointer;
         position: relative; }
         .navbar__settings .notification__btn i {
-          color: #fff;
-          font-size: 20px; }
+          color: #b8b8b8;
+          font-size: 20px;
+          transition: color .3s ease; }
+          .navbar__settings .notification__btn i:hover {
+            color: #6e6e6e; }
         .navbar__settings .notification__btn::before {
           content: '3';
-          color: #e4e4e4;
+          color: #fff;
           font-size: 10px;
           position: absolute;
           left: 16px;
           top: -3px;
           width: 12px;
           height: 12px;
-          background-color: #000000b3;
+          background-color: #4B49AC;
           border-radius: 10px; }
       .navbar__settings .notification__dropdown {
         top: 50px;
@@ -208,7 +235,7 @@ li {
         .navbar__settings .notification__dropdown .dropdown {
           padding-top: 10px; }
           .navbar__settings .notification__dropdown .dropdown__title {
-            color: black;
+            color: #000;
             font-size: 16px;
             letter-spacing: 1px;
             font-weight: 300;
@@ -227,7 +254,7 @@ li {
               display: flex;
               width: 100%;
               height: 100%;
-              color: black; }
+              color: #000; }
             .navbar__settings .notification__dropdown .dropdown__items i {
               width: 40px;
               height: 40px;
@@ -236,17 +263,17 @@ li {
               text-align: center;
               line-height: 40px;
               font-size: 23px;
-              background-color: #46cf46; }
+              background-color: #359e27; }
             .navbar__settings .notification__dropdown .dropdown__items .item-box {
               margin-left: 10px; }
               .navbar__settings .notification__dropdown .dropdown__items .item-box h6 {
                 font-size: 16px;
                 font-weight: 300;
-                color: black; }
+                color: #000; }
               .navbar__settings .notification__dropdown .dropdown__items .item-box p {
                 font-size: 14px;
                 font-weight: 300;
-                color: #7c7c7c; }
+                color: #6e6e6e; }
     .navbar__settings .profile {
       width: 35px;
       height: 35px;
@@ -275,7 +302,7 @@ li {
         .navbar__settings .profile__item:hover {
           background: #e2e2e2b9; }
         .navbar__settings .profile__item i {
-          color: #663f85;
+          color: #4B49AC;
           font-size: 23px; }
       .navbar__settings .profile__link {
         display: flex;
@@ -292,8 +319,11 @@ li {
       cursor: pointer; }
       .navbar__settings .todo-btn i {
         font-size: 20px;
-        color: white;
-        transform: rotate(90deg); }
+        color: #b8b8b8;
+        transform: rotate(90deg);
+        transition: color .3s ease; }
+        .navbar__settings .todo-btn i:hover {
+          color: #6e6e6e; }
 
 .show {
   animation: show-dropdown .3s forwards; }
@@ -331,14 +361,20 @@ li {
   top: 50px;
   left: 0;
   bottom: 0;
-  width: 300px;
+  right: 0;
+  z-index: 20;
+  width: 100%;
+  transform: translate(-100%);
   height: calc(100vh - 50px);
   background-color: #fff;
   transition: all .3s ease-in-out; }
+  @media only screen and (min-width: 768px) {
+    .sidebar {
+      width: 300px; } }
   .sidebar ul {
     padding: 20px 0 0 20px; }
     .sidebar ul li a {
-      color: black; }
+      color: #6e6e6e; }
   .sidebar .change-mode-wrapper {
     padding: 0 20px;
     width: 100%;
@@ -397,17 +433,12 @@ li {
       .sidebar .nav__arrow.active {
         transform: rotate(90deg); }
 
-.sidebar.toggle {
-  transform: translate(-300px); }
-  @media only screen and (min-width: 576px) {
-    .sidebar.toggle {
-      transform: translate(-250px); }
-      .sidebar.toggle .nav__arrow,
-      .sidebar.toggle .nav__title {
-        display: none; }
-      .sidebar.toggle .nav__icon {
-        margin-left: auto;
-        margin-right: 0; } }
+.sidebar.sidebar-active {
+  transform: translate(0); }
+  @media only screen and (min-width: 768px) {
+    .sidebar.sidebar-active .nav__icon {
+      margin-left: auto;
+      margin-right: 0; } }
 
 @keyframes move-right {
   0% {
@@ -421,17 +452,18 @@ li {
   position: fixed;
   width: 300px;
   height: 100%;
-  background-color: #ececec;
+  background-color: #fff;
   top: 50px;
   right: 0;
   bottom: 0;
-  border-left: 1px solid #666666;
+  border-left: 1px solid #b8b8b8;
   transform: translateX(300px);
-  transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out, box-shadow .3s ease;
   z-index: 10;
   overflow-y: scroll; }
   .right-sidebar--active {
-    transform: translateX(0); }
+    transform: translateX(0);
+    box-shadow: 0px 0px 10px #00000052; }
   .right-sidebar__close-btn {
     position: absolute;
     right: 10px;
@@ -440,6 +472,7 @@ li {
     font-size: 25px;
     outline: none;
     padding: 5px;
+    color: #b8b8b8;
     cursor: pointer;
     border: none;
     transition: transform .3s ease-in-out; }
@@ -448,7 +481,7 @@ li {
   .right-sidebar__nav {
     width: 100%;
     height: 50px;
-    border-bottom: 1px solid #b8b8b8; }
+    border-bottom: 1px solid #ececec; }
     .right-sidebar__nav .nav {
       display: flex;
       height: 50px;
@@ -457,10 +490,14 @@ li {
       align-items: center; }
       .right-sidebar__nav .nav__link {
         padding: 2px;
-        color: black;
+        color: #b8b8b8;
         text-transform: uppercase; }
+        .right-sidebar__nav .nav__link:hover {
+          color: #6e6e6e; }
         .right-sidebar__nav .nav__link--active {
           color: #4B49AC; }
+          .right-sidebar__nav .nav__link--active:hover {
+            color: #3c3a8d; }
   .right-sidebar__content {
     width: 100%;
     height: auto;
@@ -472,7 +509,7 @@ li {
       .right-sidebar__content .todo-app__add-task input {
         padding: 10px 10px;
         border-radius: 10px;
-        border: 1px solid #6e6e6e;
+        border: 1px solid #b8b8b8;
         background-color: transparent;
         outline: none;
         font-size: 14px; }
@@ -481,8 +518,9 @@ li {
         border-radius: 10px;
         background-color: #4B49AC;
         padding: 0 20px;
+        font-family: "Nunito", sans-serif;
         cursor: pointer;
-        color: #ececec;
+        color: #fff;
         transition: background-color .2s ease-in-out; }
         .right-sidebar__content .todo-app__add-task button:hover {
           background-color: #3c3a8d; }
@@ -499,7 +537,7 @@ li {
         outline: 1px solid slategrey;
         border-radius: 10px; }
     .right-sidebar__content .todo-app__item {
-      border: 1px solid #6e6e6e;
+      border: 1px solid #b8b8b8;
       border-radius: 10px;
       padding: 15px 10px;
       margin-bottom: 7px;
@@ -512,9 +550,13 @@ li {
       font-size: 20px;
       top: 15px;
       right: 20px;
-      transition: color .2s ease-in-out; }
-      .right-sidebar__content .todo-app__remove-item:hover {
-        color: #6e6e6e; }
+      transition: color .2s ease-in-out;
+      background-color: #fff; }
+      .right-sidebar__content .todo-app__remove-item i {
+        color: #6e6e6e;
+        transition: color .3s ease; }
+        .right-sidebar__content .todo-app__remove-item i:hover {
+          color: #ffa500; }
     .right-sidebar__content .events__title {
       font-size: 26px;
       font-weight: 300;
@@ -535,17 +577,18 @@ li {
         color: #666666; }
 
 .main-section {
-  position: absolute;
-  width: calc(100% - 50px);
+  position: relative;
+  width: 100%;
   top: 50px;
-  left: 50px;
+  left: 0;
   background-color: #F5F7FF;
   transition: width .3s ease-in-out, left .3s ease-in-out;
   padding: 30px; }
 
-.panel-active {
-  width: calc(100% - 300px);
-  left: 300px; }
+@media only screen and (min-width: 992px) {
+  .panel-active {
+    width: calc(100% - 300px);
+    left: 300px; } }
 
 .second-section {
   width: 100%;
