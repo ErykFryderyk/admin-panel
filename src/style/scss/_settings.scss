@@ -10,10 +10,19 @@
     padding: 0;
 }
 body{
+    position: relative;
     color: black;
     background-color: $bgc;
-    font-family: $font-primary
+    font-family: $font-primary;
 }
+.mobile-nav-active{
+    overflow: hidden;
+
+    @include bp(small){
+        overflow: visible;
+    }
+}
+
 html {
     scroll-behavior: smooth;
 }
