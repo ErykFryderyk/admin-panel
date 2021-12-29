@@ -77,8 +77,73 @@
 
             .weather-info{
                 position: absolute;
-                top: 30px;
-                right: 50px;
+                display: flex;
+                top: 20px;
+                right: 20px;
+                align-items: center;
+                @include bp(small){
+                    top: 50px;
+                    right: 50px;
+                }
+                @include bp(medium){
+                    top: 30px;
+                    right: 30px;
+                }
+
+                &__sun-icon{
+                    font-size: 30px;
+                    margin-right: 7px;
+
+                    @include bp(phone){
+                        font-size: 45px;
+                    }
+                }
+                h2{
+                    font-size: 30px;
+                    font-family: $font-secondary;
+                    letter-spacing: 2px;
+
+                    @include bp(phone){
+                        font-size: 45px;
+                    }
+
+                    i{
+                        font-size: 12px;
+
+                        @include bp(phone){
+                            font-size: 16px;
+                        }
+                    }
+                }
+
+                @include bp(small){
+                    &__sun-icon{
+                        font-size: 70px;
+                    }
+
+                    h2{
+                        font-size: 70px;
+                        
+                        i {
+                            font-size: 30px;
+                        }
+                    }
+                }
+
+                @include bp(medium){
+                    &__sun-icon {
+                        font-size: 50px;
+                    }
+
+                    h2 {
+                        font-size: 50px;
+
+                        i {
+                            font-size: 20px;
+                        }
+                    }
+                }
+
             }
         }
         
