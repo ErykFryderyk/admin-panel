@@ -654,37 +654,43 @@ li {
   .dashboard__header {
     padding: 10px 15px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 50px; }
-    .dashboard__header .header__title {
-      font-size: 28px;
-      letter-spacing: 1px;
-      font-weight: 400; }
-    .dashboard__header .header__subtitle {
-      font-size: 16px;
-      font-weight: 300; }
-      .dashboard__header .header__subtitle span {
-        color: #4B49AC; }
-    .dashboard__header .header__btn {
-      padding: 7px 15px;
-      border-radius: 15px;
-      border: 1px solid transparent;
-      background-color: #fff;
-      color: #6e6e6e;
-      cursor: pointer;
-      font-weight: 300;
-      font-size: 15px;
-      transition: border .3s ease, box-shadow .3s ease; }
-      .dashboard__header .header__btn:hover {
-        border: 1px solid #ececec; }
-      .dashboard__header .header__btn:focus {
-        box-shadow: 0 0 2px 2px #e6e6e6;
-        border: 1px solid #ececec; }
-      .dashboard__header .header__btn i {
-        margin-left: 5px;
-        transform: rotate(90deg);
-        font-size: 18px; }
+    @media only screen and (min-width: 768px) {
+      .dashboard__header {
+        flex-direction: row; } }
+    .dashboard__header .header {
+      margin-bottom: 20px; }
+      .dashboard__header .header__title {
+        font-size: 28px;
+        letter-spacing: 1px;
+        font-weight: 400; }
+      .dashboard__header .header__subtitle {
+        font-size: 16px;
+        font-weight: 300; }
+        .dashboard__header .header__subtitle span {
+          color: #4B49AC; }
+      .dashboard__header .header__btn {
+        padding: 7px 15px;
+        border-radius: 15px;
+        border: 1px solid transparent;
+        background-color: #fff;
+        color: #6e6e6e;
+        cursor: pointer;
+        font-weight: 300;
+        font-size: 15px;
+        transition: border .3s ease, box-shadow .3s ease; }
+        .dashboard__header .header__btn:hover {
+          border: 1px solid #ececec; }
+        .dashboard__header .header__btn:focus {
+          box-shadow: 0 0 2px 2px #e6e6e6;
+          border: 1px solid #ececec; }
+        .dashboard__header .header__btn i {
+          margin-left: 5px;
+          transform: rotate(90deg);
+          font-size: 18px; }
   .dashboard__wrapper {
     width: 100%;
     height: auto;
