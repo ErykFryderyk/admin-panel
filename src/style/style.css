@@ -117,18 +117,26 @@ li {
   height: 50px;
   padding: 0 15px;
   display: grid;
-  grid-template-columns: .5fr 1fr .5fr;
+  grid-template-columns: 50px 1fr 50px;
   background-color: #fff;
   z-index: 999;
   box-shadow: 0 0 10px 0px #b8b8b8; }
   @media only screen and (min-width: 576px) {
     .navbar {
-      grid-template-columns: 300px 1fr 110px;
+      grid-template-columns: 150px 1fr 50px;
       padding: 0px 30px; } }
+  @media only screen and (min-width: 768px) {
+    .navbar {
+      grid-template-columns: 150px 1fr 110px; } }
+  @media only screen and (min-width: 992px) {
+    .navbar {
+      grid-template-columns: 200px 1fr 110px; } }
   .navbar__brand {
     display: flex;
     height: 50px;
-    align-items: center; }
+    align-items: center;
+    grid-column: 1;
+    grid-row: 1; }
     .navbar__brand i {
       font-size: 30px;
       color: #248AFD; }
@@ -154,7 +162,16 @@ li {
   .navbar__menu {
     display: flex;
     align-items: center;
+    justify-content: end;
     height: 50px; }
+    @media only screen and (min-width: 768px) {
+      .navbar__menu {
+        padding-left: 20px;
+        justify-content: start;
+        grid-column: 2;
+        grid-row: 1;
+        border-left: 1px solid #ececec;
+        border-radius: 50px; } }
     .navbar__menu .hamburger {
       font-size: 25px;
       cursor: pointer;
@@ -164,8 +181,11 @@ li {
         color: #b8b8b8; }
     .navbar__menu .search {
       margin-left: 20px;
-      display: flex;
-      position: relative; }
+      position: relative;
+      display: none; }
+      @media only screen and (min-width: 768px) {
+        .navbar__menu .search {
+          display: flex; } }
       .navbar__menu .search i {
         color: #6e6e6e;
         position: absolute;
@@ -191,7 +211,14 @@ li {
   .navbar__settings {
     display: flex;
     align-items: center;
-    justify-content: space-between; }
+    justify-content: space-between;
+    width: 100px;
+    margin-right: 0;
+    margin-left: auto; }
+    @media only screen and (min-width: 768px) {
+      .navbar__settings {
+        grid-column: 3;
+        grid-row: 1; } }
     .navbar__settings .notification {
       display: flex;
       justify-content: center;
