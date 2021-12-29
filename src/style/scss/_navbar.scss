@@ -6,20 +6,28 @@
     height: 50px;
     padding: 0 15px;
     display: grid;
-    grid-template-columns: .5fr 1fr .5fr;
+    grid-template-columns: 50px 1fr 50px;
     background-color: $white;
     z-index: 999;
     box-shadow: 0 0 10px 0px $color-1;
 
     @include bp(phone){
-        grid-template-columns: 300px 1fr 110px;
+        grid-template-columns: 150px 1fr 50px;
         padding: 0px 30px;
-    }   
+    }
+    @include bp(small){
+        grid-template-columns: 150px 1fr 110px;
+    }
+    @include bp(medium){
+        grid-template-columns: 200px 1fr 110px;
+    }
 
     &__brand{
         display: flex;
         height: 50px;
         align-items: center;
+        grid-column: 1;
+        grid-row: 1;
 
         i {
             font-size:  30px;
@@ -53,7 +61,17 @@
     &__menu{
         display: flex;
         align-items: center;
+        justify-content: end;
         height: 50px;
+
+        @include bp(small){
+            padding-left: 20px;
+            justify-content: start;
+            grid-column: 2;
+            grid-row: 1;
+            border-left: 1px solid $color-0;
+            border-radius: 50px;
+        }
 
         .hamburger{
             font-size: 25px;
@@ -67,8 +85,12 @@
         }
         .search{
             margin-left: 20px;
-            display: flex;
             position: relative;
+            display: none;
+            
+            @include bp(small) {
+                display: flex;
+            }
 
             i{
                 color: $color-3;
@@ -77,7 +99,7 @@
                 top: 5px;
                 left: 8px;
             }
-
+            
             input{
                 border: none;
                 outline: none;
@@ -107,6 +129,13 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        width: 100px;
+        margin-right: 0;
+        margin-left: auto;
+        @include bp(small){
+            grid-column: 3;
+            grid-row: 1;
+        }
 
         .notification{
             display: flex;
