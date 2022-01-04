@@ -101,6 +101,8 @@
                 &__sun-icon{
                     font-size: 30px;
                     margin-right: 7px;
+                    color:$color-9;
+
 
                     @include bp(phone){
                         font-size: 45px;
@@ -110,6 +112,8 @@
                     font-size: 30px;
                     font-family: $font-secondary;
                     letter-spacing: 2px;
+                    color:$color-8;
+
 
                     @include bp(phone){
                         font-size: 45px;
