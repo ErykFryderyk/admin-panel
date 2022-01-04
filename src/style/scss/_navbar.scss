@@ -179,7 +179,7 @@
             }
             &__dropdown{
                 top: 50px;
-                left: -230px;
+                left: -130px;
                 border-radius: 5px;
                 position: absolute;
                 background-color: $white;
@@ -187,6 +187,10 @@
                 height: auto;
                 box-shadow: $box-shadow;
                 // visibility: hidden;
+
+                @include bp(small){
+                    left: -230;
+                }
 
                 .dropdown{
                     padding-top: 10px;
