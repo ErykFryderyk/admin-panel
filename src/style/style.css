@@ -252,13 +252,16 @@ li {
           border-radius: 10px; }
       .navbar__settings .notification__dropdown {
         top: 50px;
-        left: -230px;
+        left: -130px;
         border-radius: 5px;
         position: absolute;
         background-color: #fff;
         min-width: 250px;
         height: auto;
         box-shadow: 0px 0px 10px #00000052; }
+        @media only screen and (min-width: 768px) {
+          .navbar__settings .notification__dropdown {
+            left: -230; } }
         .navbar__settings .notification__dropdown .dropdown {
           padding-top: 10px; }
           .navbar__settings .notification__dropdown .dropdown__title {
