@@ -17,13 +17,13 @@
             <label>Admin Panel</label>
         </div>
         <div class="navbar__settings">
-            <div class="notification__wrapper">
+            <div class="notification__wrapper" data-dropdown>
                 <button class="notification__btn" data-dropdown-btn>
-                    <i class="fa fa-bell" aria-hidden="true">
-                        <span class="count"></span>
+                    <i class="fa fa-bell" data-dropdown-btn aria-hidden="true">
+                        <span data-dropdown-btn class="count"></span>
                     </i>
                 </button>
-                <div class="notification__dropdown hide" data-dropdown>
+                <div class="notification__dropdown">
                     <ul class="dropdown">
                         <h3 class="dropdown__title">Notifications</h3>
                         <li class="dropdown__items">
@@ -59,9 +59,9 @@
             <div class="todo-btn" data-settings-btn> 
                 <i class="fa fa-plus-square" aria-hidden="true"></i>
             </div>
-            <div class="profile">
-                <img src="./src/img/received_909123655824827.jpeg" data-profile-btn alt="">
-                <div class="profile__dropdown hide" data-profile-dropdown>
+            <div class="profile" data-dropdown>
+                <img src="./src/img/received_909123655824827.jpeg" data-dropdown-btn alt="">
+                <div class="profile__dropdown" >
                     <ul class="profile__inner">
                         <li class="profile__item">
                             <a class="profile__link" href="#">
