@@ -154,7 +154,6 @@
                 cursor: pointer;
                 position: relative;
                 
-                
                 i{
                     color: $color-1;
                     font-size: 20px;
@@ -179,17 +178,20 @@
             }
             &__dropdown{
                 top: 50px;
-                left: -130px;
+                left: -230px;
                 border-radius: 5px;
                 position: absolute;
                 background-color: $white;
                 min-width: 250px;
                 height: auto;
                 box-shadow: $box-shadow;
-                // visibility: hidden;
+                opacity: 0;
+                pointer-events: none;
+                transform: translateY(-10px);
+                transition: opacity .3s ease-in-out, transform .3s ease-in-out;
 
-                @include bp(small){
-                    left: -230;
+                @include bp(phone){
+                    left: -230px;
                 }
 
                 .dropdown{
@@ -270,7 +272,16 @@
                 border-radius: 5px;
                 z-index: 999;
                 box-shadow: $box-shadow;
-                // visibility: hidden;
+                opacity: 0;
+                pointer-events: none;
+                transform: translateY(-10px);
+                transition: opacity .3s ease-in-out, transform .3s ease-in-out;
+
+                &.active{
+                    opacity: 1;
+                    transform: translateY(0);
+                    pointer-events: auto;
+                }
             }
 
             &__inner{
@@ -323,48 +334,54 @@
             }
         }
     }
-}
-.show {
-    animation: show-dropdown .3s forwards;
-}
-
-.hide {
-    animation: hide-dropdown .3s forwards;
-}
-
-@keyframes show-dropdown {
-    0% {
-        // visibility: hidden;
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    1%{
-        visibility: visible;
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    100% {
+    .notification__wrapper.active .notification__dropdown,
+    .profile.active .profile__dropdown {
         opacity: 1;
         transform: translateY(0);
-        display: visible;
+        pointer-events: auto;
     }
 }
+// .show {
+//     animation: show-dropdown .3s forwards;
+// }
 
-@keyframes hide-dropdown {
-    0% {
-        // visibility: visible;
-        opacity: 1;
-        transform: translateY(0px);
-    }
+// .hide {
+//     animation: hide-dropdown .3s forwards;
+// }
 
-    99%{
-    visibility: visible;
-    opacity: 0;
-    transform: translateY(-20px);
+// @keyframes show-dropdown {
+//     0% {
+//         // visibility: hidden;
+//         opacity: 0;
+//         transform: translateY(-20px);
+//     }
+//     1%{
+//         visibility: visible;
+//         opacity: 0;
+//         transform: translateY(-20px);
+//     }
+//     100% {
+//         opacity: 1;
+//         transform: translateY(0);
+//         display: visible;
+//     }
+// }
+
+// @keyframes hide-dropdown {
+//     0% {
+//         // visibility: visible;
+//         opacity: 1;
+//         transform: translateY(0px);
+//     }
+
+//     99%{
+//     visibility: visible;
+//     opacity: 0;
+//     transform: translateY(-20px);
     
-    }
-    100%{
-        visibility: hidden;
-    }
+//     }
+//     100%{
+//         visibility: hidden;
+//     }
 
-}
+// }
