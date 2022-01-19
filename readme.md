@@ -2,7 +2,6 @@
   <h1 align="center">Panel Dashboard</h3>
 
 <p align="center">
-    
     <br />
     <br />
     <a href="https://erykfryderyk.github.io/admin-panel/" target="blank">View Demo</a>
@@ -30,7 +29,7 @@
 
 The Admin Dashboard provides direct access to important tools for faster and more convenient management.
 
-This project is inspired https://technext.github.io/skydash/index.html#
+This project is inspired [TECHNEXT]('https://technext.github.io/skydash/index.html#')
 
 <!-- USE TECHNOLOGI-->
 ### Built With
